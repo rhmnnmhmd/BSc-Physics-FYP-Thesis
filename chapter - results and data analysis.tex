@@ -1,0 +1,103 @@
+\chapter{Results and Data Analysis}
+As this thesis are focused on coherent light-matter interactions specifically the coherent superflash phenomena, the results and analysis that will be presented in this chapter will be crucially related to that phenomena.\\
+
+The results and analysis that will be presented in this chapter will be heavily focused on the extension of coherent superflash research in a new kind 3-level EIT-enabled medium. The idea of extending the research of coherent superflash into 3-level EIT-enabled medium mainly came from these 2 research papers one published in Optic Letters and the other in Physical Review Letters. The first one that was published in Optics Letters was not actually researching on the coherent superflash like this project but actually they researched about the interference phenomena between the optical precursors and the delayed main field (slow-light effect caused by EIT) \cite{Jeong2010}. The main takeaway from their research are the explicit expression for the 3-level EIT-enabled medium and the numerical FFT/IFFT technique they'd implement to study transmitted field/s temporally & spectrally. Meanwhile, the second paper \cite{Kwong2014} was actually researching the coherent superflash that's definitely related to this project. They observed the formation of superflash for light incident on an optically thick cold strontium gas both experimentally and numerically. The main idea from their paper that is incorporated in this project is on how they studied the coherent superflash by studying the behaviour of the forward-scattered intensity (the superflash itself) when the laser probe detuning are varied (Refer Figure 1d of \cite{Kwong2014}).
+
+\newpage
+
+So, in this chapter, it will be divided to 4 sections. The 1st section in this chapter will be dedicated to showing some temporal profiles that was generated using the programming code that was developed throughout this project. Its purpose is to show the validity of the code and how it's able to produce accurate & similar temporal profiles to the ones produced in many previous research papers. Next, for the 2nd section in this chapter, the focus will shift to the forward-scattered intensity spectrum (Forward-scattered intensity $I_{s}$ vs Probe Laser detuning $\Delta$). The difference between the forward-scattered intensity spectrum that was produced from the usual 2-level medium and the 3-level EIT-enabled medium will be emphasized here. We'll see a new behaviour around the resonances region that can be counted as a new finding from this project because as of right now, there has never been any studies on the forward-scattered intensity spectrum for 3-level EIT-enabled medium. Going further, in the 3rd section, the newly-discovered pattern of the forward-scattered spectrum for 3-level EIT medium will be justified by comparing its peak values (near-resonance and off-resonance) with their corresponding temporal profile. Finally, in the 4th section, the effect of varying the coupling laser's Rabi frequency on the forward-scattered intensity spectrum will be shown through the different output plots. We then propose an explanation for this effect by relating it to the detuning of the incident field $\Delta$ and the phase shift of the transmitted field $\phi(\delta)$.
+
+\newpage
+
+\section{Reproduction of Temporal Profiles}
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[h!]{0.5\textwidth}
+         \centering
+         \includegraphics[width = \textwidth]{oriPlot}
+         \caption{Figure courtesy of \cite{jeong2010slow}}
+         \label{fig: original plot}
+    \end{subfigure}
+    
+    \hfill
+    
+    \begin{subfigure}[h!]{0.5\textwidth}
+         \centering
+         \includegraphics[width = \textwidth]{Temp_Profile_EIT_On-Resonance}
+         \caption{Temporal profile generated from Python code developed in this project.}
+         \label{fig: code plot}
+    \end{subfigure}
+    
+    \caption{Comparison of the transmitted intensity temporal profile for square light pulse incident on 3-level EIT-enabled medium.}
+    \label{fig: comparing temporal profile}
+\end{figure}
+
+From Figure \ref{fig: comparing temporal profile}, we can see that the Python code developed through this project were able to simulate the transmission intensity temporal profile of \cite{jeong2010slow} successfully. This serve to show that the simulation code developed from this project (More details discussed in the Methodology chapter) are valid and reliable enough to be utilized as the main tool for researching the coherent superflash phenomena.\\
+
+The code for simulating the transmission temporal profile are really crucial for this project and must be sufficiently accurate because all further results/plots after this heavily depends on the temporal profile code. This is because, for example, for the next result section that will be discussing the forward-scattered intensity spectrum $I_{s}$, the plots displayed in that section (values of $I_{s}$) are extracted at the abrupt extinction point in the temporal profile varied over different values of probe detuning $\Delta$. Therefore, if Figure \ref{fig: original plot} can't even be properly reproduced with correct values by the code developed here, then all further outputs would be pointless.\\
+
+Analysis of the plot in Figure \ref{fig: original plot} have been done in details in terms of optical precursors and delayed main field \cite{jeong2010slow} but they didn't focus specifically on the coherent superflash that occurred at the abrupt-extinction region. In terms of coherent superflash studies, the (peak) value of transmitted intensity at the abrupt-extinction region is exactly equivalent to the forward-scattered intensity $I_{s} = |E_{s}|^{2}$. The mechanism for how the value of this forward-scattered intensity $I_{s}$ varies with probe detuning $\Delta$ are discussed in detail in \cite{Chalony2011, Kwong2014, Kwong2017}. Some of their main points are also discussed in the Literature Review chapter. In short, the value of forward-scattered intensity $I_{s}$ depends on the phase of its field $\phi_{s}$ that also depends on the detuning of the probe field $\Delta$. Therefore, certain detuning of the probe field can produce forward-scattered field with a phase such that it will have a magnitude of more than 1 (basically superflash phenomena) at the abrupt-extinction point.\\
+
+The Figure \ref{fig: theta_s} that was taken from \cite{Kwong2014} summarized this idea concisely where we can notice that the magnitude of the forward-scattered field are not necessarily bounded to the magnitude of the incident electric field. In addition to that, the interference between the incident field and forward-scattered field doesn't have anything to do with the values of the forward-scattered intensity at the abrupt-extinction point. This is true because during that point in time, the probe laser has been turned off and the forward-scattered field are actually radiated by the "residual" dipoles in the medium that doesn't instantaneously decay to $0$.\\
+
+This is also related to the cooperative emission effect that was mentioned in \cite{Kwong2014, Kwong2015, Kwong2017, Araujo2016} that is prevalent in optically thick medium. Its main effect is to reduce the decay time (inverse of atomic excited-state decay rate $\Gamma$) of the superflash itself by a certain different factors depending on the modulation of the incident field. The specific expression for these factors can be found in \cite{Kwong2017} and they also mentioned that there are a common factor even for different type of modulation that doesn't depend on the temperature of the medium or even the detuning of the probe field. The factor is $\frac{2}{b_{0}(0)}$ where $b_{0}(0)$ are the resonant optical depth of the medium at zero-temperature which is the main parameter that governs this cooperative effect.\\
+
+To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the probe detuning $\Delta$, some temporal profiles are shown below but instead of 0-detuning case as produced by \cite{jeong2010slow} as shown in Figure \ref{fig: original plot}, the temporal profiles are for the case of non-zero detuning. All of it are generated from the simulation code that is developed in this project.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.65]{Figures/3temporalProfileDetuned.png}
+    \caption{Transmission intensity temporal profile of an incident square pulse (pulse duration of $2\cdot10^{-6}$ sec) on cold, dilute atomic gas of Rb-85 with optical depth (OD) of 62 and coupling laser's Rabi frequency of $4.2\gamma_{13}$ where $\gamma_{13}$ is half of the natural linewidth $\gamma_{13} = \frac{\Gamma_{3}}{2} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$. Each only have different probe detuning $\Delta$. a) $\Delta = 5.6764\gamma_{13}$. b) $\Delta = 0.3714\gamma_{13}$. c) $\Delta = 11.2467\gamma_{13}$.}
+    \label{fig: comparing temporal profile}
+\end{figure}
+
+
+\section{Forward-Scattered Intensity Spectrum for 3-Level EIT-Enabled Medium}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.65]{Figures/IsSpectrumComparison.png}
+    \caption{The forward-scattered intensity detuning spectrum in short "$I_{s}$ spectrum" for the same initial parameters but a) Without EIT (Coupling laser's Rabi frequency $\Omega_{c} = 0 \frac{rad}{sec}$) while b) With EIT (Coupling laser's Rabi frequency $\Omega_{c} = 4.2\gamma_{13} \frac{rad}{sec}$)}
+    \label{fig: comparing Is sepctrum}
+\end{figure}
+
+
+\section{Corresponding Temporal Profile for The Maximum Points in The 3-Level EIT Medium's Forward-Scattered Intensity Spectrum}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.65]{Figures/correspondingTemporalProfile2.png}
+    \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-disabled medium ($\Omega_{c} = 0 \frac{rad}{sec}$). b)  Temporal profile at probe detuning $\Delta = 3.1565\gamma_{13}$. c) Temporal profile at probe detuning $\Delta = 10.8488\gamma_{13}$.}
+    \label{fig: corresponding temporal profile 1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+     \includegraphics[scale= 0.65]{Figures/correspondingTemporalProfile1.png}
+    \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 4.2\gamma_{13} \frac{rad}{sec}$). b)  Temporal profile at probe detuning $\Delta = 0.3714\gamma_{13}$. c) Temporal profile at probe detuning $\Delta = 11.2467\gamma_{13}$.}
+    \label{fig: corresponding temporal profile 2}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.47]{Figures/correspondingTemporalProfile3.png}
+    \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 8.4\gamma_{13} \frac{rad}{sec}$). b)  Temporal profile at probe detuning $\Delta = 1.2997\gamma_{13}$. c) Temporal profile at probe detuning $\Delta = 12.3077\gamma_{13}$.}
+    \label{fig: corresponding temporal profile 3}
+\end{figure}
+
+
+\section{Relation between The Forward-Scattered Intensity Spectrum with The Coupling Laser's Rabi Frequency}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.7]{Figures/comparisonSpectral.PNG}
+    \caption{$I_{s}$ spectrum for 4 different values of coupling laser's Rabi frequency $\Omega_{c}$. All of it have same OD of 62. Same probe laser parameters. a) $\Omega_{c} = 0 \frac{rad}{sec}$. b) $\Omega_{c} = 4.2\gamma_{13} \frac{rad}{sec}$. c) $\Omega_{c} = 8.4\gamma_{13} \frac{rad}{sec}$. d) $\Omega_{c} = 16.8\gamma_{13} \frac{rad}{sec}$.}
+    \label{fig: compare Is spectrums}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.65]{Figures/IsExplainCompared.png}
+    \caption{4 subfigures each with different coupling laser's Rabi frequency $\Omega_{c}$. For each subfigure, the $I_{s}$ spectrum are plotted separately while the steady-state transmission $I_{ss}$ (solid green line) and the phase shift $\phi$ (solid blue line) are plotted on together. a) $\Omega_{c} = 0$. b) $\Omega_{c} = 4.2\gamma_{13}$. c) $\Omega_{c} = 8.4\gamma_{13}$. d) $\Omega_{c} = 16.8\gamma_{13}$. $\gamma_{13} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$.}
+    \label{fig: Is compared to transmission & phase shift}
+\end{figure}
