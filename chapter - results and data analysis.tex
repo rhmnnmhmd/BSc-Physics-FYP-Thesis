@@ -42,7 +42,9 @@ The Figure \ref{fig: theta_s} that was taken from \cite{Kwong2014} summarized th
 
 This is also related to the cooperative emission effect that was mentioned in \cite{Kwong2014, Kwong2015, Kwong2017, Araujo2016} that is prevalent in optically thick medium. Its main effect is to reduce the decay time (inverse of atomic excited-state decay rate $\Gamma$) of the superflash itself by a certain different factors depending on the modulation of the incident field. The specific expression for these factors can be found in \cite{Kwong2017} and they also mentioned that there are a common factor even for different type of modulation that doesn't depend on the temperature of the medium or even the detuning of the probe field. The factor is $\frac{2}{b_{0}(0)}$ where $b_{0}(0)$ are the resonant optical depth of the medium at zero-temperature which is the main parameter that governs this cooperative effect.\\
 
-To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the probe detuning $\Delta$, some temporal profiles are shown below but instead of 0-detuning case as produced by \cite{jeong2010slow} as shown in Figure \ref{fig: original plot}, the temporal profiles are for the case of non-zero detuning. All of it are generated from the simulation code that is developed in this project.
+To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the probe detuning $\Delta$, some temporal profiles are shown in Figure \ref{fig: comparing temporal profile} but instead of 0-detuning case as produced by \cite{jeong2010slow} as shown in Figure \ref{fig: original plot}, the temporal profiles are for the case of non-zero detuning. All of it are generated from the simulation code that is developed in this project.\\
+
+As can be seen from Figure \ref{fig: comparing temporal profile}, the forward-scattered intensity $I_{s}$ (Transmission intensity immediately after abrupt extinction) does indeed vary depending on the probe detuning $\Delta$. We could get both the desired coherent superflash (Figure \ref{fig: comparing temporal profile}b and \ref{fig: comparing temporal profile}c) and the coherent antiflash also mentioned in \cite{Kwong2017} (Forward-scattered intensity lower than incident intensity. Figure \ref{fig: comparing temporal profile}a). In addition to that, the coherent superflash produced in Figure \ref{fig: comparing temporal profile}b and \ref{fig: comparing temporal profile}c both are significantly higher having value of nearly $3I_{0}$ and about $3I_{0}$ respectively. Approaching the upper limit value of $4I_{0}$ according to the discussion in \cite{Kwong2014}.
 
 \begin{figure}[h!]
     \centering
@@ -50,6 +52,9 @@ To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the 
     \caption{Transmission intensity temporal profile of an incident square pulse (pulse duration of $2\cdot10^{-6}$ sec) on cold, dilute atomic gas of Rb-85 with optical depth (OD) of 62 and coupling laser's Rabi frequency of $4.2\gamma_{13}$ where $\gamma_{13}$ is half of the natural linewidth $\gamma_{13} = \frac{\Gamma_{3}}{2} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$. Each only have different probe detuning $\Delta$. a) $\Delta = 5.6764\gamma_{13}$. b) $\Delta = 0.3714\gamma_{13}$. c) $\Delta = 11.2467\gamma_{13}$.}
     \label{fig: comparing temporal profile}
 \end{figure}
+
+To summarise this section, 
+
 
 
 \section{Forward-Scattered Intensity Spectrum for 3-Level EIT-Enabled Medium}
