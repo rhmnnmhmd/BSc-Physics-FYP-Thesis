@@ -1,0 +1,8 @@
+\chapter{Methodology}
+
+\section{FFT/IFFT Methodology for Current Project}
+For this project, all the simulation code are programmed in the Python programming language. The FFT/IFFT-related procedure are executed using the built-in FFT/IFFT function in the Python's SciPy/NumPy module.\\
+
+In simulating the transmitted electric field $E_{t}(t, z)$, the earlier part of the code involve creating user-defined functions such as for the susceptibility $\chi(\omega)$ and wave-number $k(\omega)$. The expression for these functions in the code are modified a little bit compared to their respective theoretical expression as stated in previous sections. Next, the important constant parameters related to the medium and incident pulse are defined. For demonstration, the code discussed here is for the reproduction of the plot of transmitted field as shown in Figure 3 of \cite{jeong2010slow}.\\
+
+For the medium, some example of the important parameters are the resonant wavelength ($\lambda_{0} = 7.8 \cdot 10^{-7}$m), the dephasing rates ($\gamma_{13} = 1.885 \cdot 10^{7} \frac{rad}{sec}$, $\gamma_{12} = 0.005\gamma_{13}$), coupling laser's Rabi frequency ($\Omega_{c} = 4.2\gamma_{13}$) and resonant optical depth at non-zero temperature ($b_{\Bar{v}}(0) = 62$). For the incident pulse, its pulse length is defined to be $T = 2.5 \cdot 10^{-6}$ sec consistent with \cite{jeong2010slow}. One important parameter that is specifically related to the simulation is the sampling rate (basically the total number of data points). Throughout this project, the sampling rate are kept constant at a value of 80,000.
