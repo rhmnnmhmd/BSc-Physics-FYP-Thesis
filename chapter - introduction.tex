@@ -192,7 +192,107 @@ Where;
 So, proceeding from here, the procedure to get the transmitted field $E_{t}(t, z)$ are exactly identical as been done for 2-level medium (involving FFT of incident field and IFFT of transmitted field spectrum) but with the new definitions expressed here.
 
 \section{Density Matrix Formulation of Acquiring Susceptibility of The 3-Level EIT Medium}
+From \cite{boyd2020nonlinear}, the evolution of the density matrix elements of a quantum system that is interacting with an external perturbation can be described by Equation \ref{eqn: rhoCoherence} and \ref{eqn: rhoPopulation} for the off-diagonal and diagonal elements respectively.
 
+\begin{align}
+    \Dot{\rho}_{nm} &= \frac{1}{i\hbar} [\hat{H}, \hat{\rho}]_{nm} - \gamma_{nm} \rho_{nm}, \space n \neq m \label{eqn: rhoCoherence}\\
+    \Dot{\rho}_{nn} &= \frac{1}{i\hbar} [\hat{H}, \hat{\rho}]_{nn} + \sum_{E_{m} > E_{n}} \Gamma_{nm}\rho_{mm} - \sum_{E_{m} < E_{n}} \Gamma_{mn} \rho_{nn} \label{eqn: rhoPopulation}
+\end{align} 
+    
+Where;
+
+\begin{itemize}
+    \item $\gamma_{nm} = \frac{1}{2} (\Gamma_{n} + \Gamma_{m})$ is the damping rate for the off-diagonal elements
+    \item $\Gamma_{n} = \sum_{n'(E_{n'} < E_{n})} \Gamma_{n'n}$ is the total decay rate out of state $\ket{n}$
+\end{itemize}
+
+Specifying and expressing the Hamiltonian $\hat{H}$ as;
+
+\begin{align}
+    \hat{H} &= \hat{H_{0}} + \hat{V}(t)\\
+            &= \hat{H_{0}} - \vb{\hat{p}} \cdot \va{E}(t)
+\end{align}
+
+We can then express Equation \ref{eqn: rhoCoherence} and \ref{eqn: rhoPopulation} as;
+
+\begin{align}
+    \Dot{\rho}_{nm} &= -(i\omega_{nm} + \gamma_{nm}) \rho_{nm} + \frac{i}{\hbar} [\hat{V}, \hat{\rho}]_{nm} \label{eqn: rhoCohNew}\\
+    \Dot{\rho}_{nn} &= \frac{i}{\hbar} [\hat{V}, \hat{\rho}]_{nn} + \sum_{E_{m} > E_{n}} \Gamma_{nm}\rho_{mm} - \sum_{E_{m} < E_{n}} \Gamma_{mn} \rho_{nn} \label{eqn: rhoPopNew}
+\end{align}
+
+Because our medium is composed of a 3-level atoms, we first assign the state $\ket{g}$, $\ket{e}$ and $\ket{c}$ for the ground, excited and coupling state respectively. The schematic of the energy level can be seen in Figure \ref{fig: 3LevelAtom} \cite{jeong2010slow}. Next, for convenience, we redefine our $\rho_{ij}$'s and $\rho_{ii}$'s as;
+
+\begin{align}
+    \rho_{ii} &= \sigma_{ii} \label{eqn: rhoFirst}\\
+    \rho_{eg} &= \sigma_{eg} e^{-i \omega_{p} t}\\
+    \rho_{ec} &= \sigma_{ec} e^{-i \omega_{c} t}\\
+    \rho_{cg} &= \sigma_{cg} e^{-i (\omega_{p} - \omega_{c}) t} \label{eqn: rhoLast}
+\end{align}
+
+Where;
+
+\begin{itemize}
+    \item $\sigma_{ii}$ are the steady-state diagonal density matrix elements
+    \item $\sigma_{eg}$, $\sigma_{ec}$ and $\sigma_{cg}$ are the steady-state offf-diagonal density matrix elements
+    \item $\omega_{p}$ is the angular frequency of the incident probe beam probing the transition between $\ket{g}$ and $\ket{e}$
+    \item $\omega_{c}$ is the angular frequency of the coupling beam coupling the state $\ket{e}$ and $\ket{c}$
+\end{itemize}
+
+
+So, using Equation \ref{eqn: rhoCohNew} and \ref{eqn: rhoPopNew} and the newly-defined density matrix elements, we can get a total of $6$ coupled equations to solve for $\sigma_{gg}$, $\sigma_{ee}$, $\sigma_{cc}$, $\sigma_{eg}$, $\sigma_{ec}$ and $\sigma_{cg}$.
+
+\begin{align}
+    \Dot{\sigma_{gg}} &= \Gamma_{eg} \sigma_{ee} + \Gamma_{cg} \sigma_{cc} + \frac{i}{2} \{\Omega_{p}^{*} \sigma_{eg} - \Omega_{p} \sigma_{ge}\} \label{eqn: 1st}\\
+    \Dot{\sigma_{ee}} &= -(\Gamma_{ec} + \Gamma_{eg}) \sigma_{ee} + \frac{i}{2} \{\Omega_{p} \sigma_{ge} + \Omega_{c} \sigma_{ce} - \Omega_{p}^{*} \sigma_{eg} - \Omega_{c}^{*} \sigma_{ec}\}\\
+    \Dot{\sigma_{cc}} &= \Gamma_{ec} \sigma_{ee} - \Gamma_{cg} \sigma_{cc} + \frac{i}{2} \{\Omega_{c}^{*} \sigma_{ec} - \Omega_{c} \sigma_{ce}\}\\
+    \Dot{\sigma_{eg}} &= \{i \Delta_{p} - \gamma_{eg}\}\sigma_{eg} + \frac{i}{2} \{[\sigma_{gg} - \sigma_{ee}] \Omega_{p} + \Omega_{c} \sigma_{cg}\}\\
+    \Dot{\sigma_{ec}} &= \{i \Delta_{c} - \gamma_{ec}\} \sigma_{ec} + \frac{i}{2} \{\Omega_{p} \sigma_{gc} + \Omega_{c} [\sigma_{cc} - \sigma_{ee}]\}\\
+    \Dot{\sigma_{cg}} &= \{i[\Delta_{p} - \Delta_{c}] - \gamma_{cg}\}\sigma_{cg} + \frac{i}{2} \{\Omega_{c}^{*} \sigma_{eg} - \Omega_{p} \sigma_{ce}\} \label{eqn: final}
+\end{align}
+
+Where;
+
+\begin{itemize}
+    \item $\Omega_{p} = \frac{2 \hat{p}_{eg} E_{p}}{\hbar}$ is the Rabi frequency of the probe beam. $\hat{p}_{eg}$ is one of the off-diagonal matrix element of the dipole operator. $E_{p}$ is the electric field magnitude of the probe beam
+    \item $\Omega_{c} = \frac{2 \hat{p}_{ec} E_{c}}{\hbar}$ is the Rabi frequency of the coupling beam. $\hat{p}_{ec}$ is one of the off-diagonal matrix element of the dipole operator. $E_{c}$ is the electric field magnitude of the coupling beam.
+    \item $\Delta_{p} = \omega_{p} - \omega_{eg}$ is the detuning of the probe beam. $\omega_{eg}$ is the transition frequency between level $\ket{e}$ and $\ket{g}$
+    \item $\Delta_{c} = \omega_{c} - \omega_{ec}$ is the detuning of the coupling beam. $\omega_{ec}$ is the transition frequency between level $\ket{e}$ and $\ket{c}$
+\end{itemize}
+
+Note that, in obtaining Equation \ref{eqn: 1st} until \ref{eqn: final}, we also implemented the Rotating Wave Approximation \cite{boyd2020nonlinear}. Now, the coupled equations (\ref{eqn: 1st} until \ref{eqn: final}) can be solved by equating all of it to $0$ signifying that the solution is a steady-state solution $\dv{\vb{\hat{\sigma}}}{t} = 0$. Another simplification that is made is, we assume an on-resonance coupling beam therefore $\Delta_{c} = 0$. With all these assumptions and simplifications, we can get $\sigma_{eg}$ that is related to the electric susceptibility of our 3-level EIT medium. $\sigma_{eg}$ is expressed as;
+
+\begin{equation}
+    \sigma_{eg} = - \frac{i}{2} \frac{\Omega_{p}}{(i \Delta_{p} - \gamma_{eg})} \frac{1}{1 + \frac{\abs{\Omega_{c}}^{2}}{4(i\Delta_{p} - \gamma_{eg})(i \Delta_{p} - \gamma_{cg})}}
+    \label{eqn: sigmaeg}
+\end{equation}
+
+To get the electric susceptibility $\chi(\Delta_{p})$, we use the definition of medium polarization $P(\omega)$ below;
+
+\begin{equation}
+    P = \chi E = N \expval{\hat{\vb{p}}} = N \Tr{\hat{\vb{\rho}} \hat{\vb{p}}}
+    \label{eqn: P}
+\end{equation}
+
+$N$ is the medium number density (unit of $m^{-3}$). We found that $\Tr{\hat{\vb{\rho}} \hat{\vb{p}}}$ can be expressed as;
+
+\begin{equation}
+    \Tr{\hat{\vb{\rho}} \hat{\vb{p}}} = \hat{p}_{eg} \hat{\rho}_{ge} + \hat{p}_{ge} \hat{\rho}_{eg} + \hat{p}_{ce} \hat{\rho}_{ec} + \hat{p}_{ec} \hat{\rho}_{cc}
+\end{equation}
+
+Next, using the definition for $\rho_{ii}$ and $\rho_{ij}$'s from Equation \ref{eqn: rhoFirst} until \ref{eqn: rhoLast} and defining $E = E_{p} e^{-i \omega_{p} t}$ (also involve using RWA), Equation \ref{eqn: P} can be solved for $\chi$ to get;
+
+\begin{equation}
+    \chi = \frac{N p_{ge} \sigma_{eg}}{E_{p}}
+    \label{eqn: chi}
+\end{equation}
+
+So, substituting $\sigma_{eg}$ from Equation \ref{eqn: sigmaeg} into Equation \ref{eqn: chi} and simplifying, we will finally get the explicit expression for the electric susceptibility $\chi$ for our 3-level EIT medium. It is expressed as;
+
+\begin{equation}
+    \chi = \frac{4 N \abs{p_{eg}}^{2}}{\hbar} \frac{\Delta_{p} + i \gamma_{cg}}{\abs{\Omega_{c}}^{2} - 4(\Delta_{p} + i \gamma_{cg})(\Delta_{p} + i \gamma_{eg})}
+\end{equation}
+
+This expression for $\chi$ is the expression that will be used in the definition of medium refractive index $n(\Delta_{p}) = \sqrt{1 + \chi}$ that is related to the wavenumber by $k(\Delta_{p}) = \frac{\omega_{0}}{c} n(\Delta_{p})$ in order to simulate the transmitted intensity $I_{t}(t, z) = \abs{E_{t}(t, z)}^{2}$ where $E_{t}(t, z)$ is defined by Equation \ref{eqn: ezta}.
 
 
 \section{Numerical Treatment of Coherent Flash/Superflash}
