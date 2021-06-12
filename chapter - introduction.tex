@@ -1,25 +1,28 @@
 \chapter{Introduction}
-When we discuss interaction between light and matter, there are various kind of interactions ranging from interaction at the macroscopic scale such as light interaction/dynamics in wave and geometric optics e.g. reflection, refraction, diffraction, scattering and many more. While at the microscopic scale such as phenomena of absorption and transmission of light, we are required to use a different approach to study interaction of light with individual atoms and molecules at this scale. The kind of physics that is generally applied to analyse light interaction with matter at this scale is Atomic, Molecular and Optical (AMO) Physics, also called semi-classical physics.\\
+When we discuss interaction between light and matter, there are various kind of interactions ranging from interaction at the macroscopic scale such as light interaction/dynamics in wave and geometric optics e.g. reflection, refraction, diffraction, scattering and many more. While at the microscopic scale such as phenomena of absorption and transmission of light, we are required to use a different approach to study interaction of light with individual atoms and molecules at this scale. The kind of physics that is generally applied to analyse light interaction with matter at this scale is Atomic, Molecular and Optical (AMO) Physics, also called semi-classical physics.
 
-Semi-classical physics combine classical physics and quantum physics where the incident light are modeled as a classical wave and the atoms/molecules in the medium are modeled as an N-level quantum system. In understanding light-matter interaction, we need to know the classical model of electromagnetic (EM) waves, quantum model of atom as N-level quantum system and how these 2 elements combine to give rise to semi-classical physics that are used widely in AMO physics and also will be used exhaustively in this thesis too. \\
+Semi-classical physics combine classical physics and quantum physics where the incident light are modeled as a classical wave and the atoms/molecules in the medium are modeled as an N-level quantum system. In understanding light-matter interaction, we need to know the classical model of electromagnetic (EM) waves, quantum model of atom as N-level quantum system and how these 2 elements combine to give rise to semi-classical physics that are used widely in AMO physics and also will be used exhaustively in this thesis too.
 
-Firstly, we will review some basic concepts regarding light-matter interaction. When discussing about light-matter interaction especially the phenomenon where light is in incident on a medium, the most important properties that we need to consider to analyze the behaviour of light wave through this medium is the properties of the medium itself. The medium for light-matter interaction is mainly characterized by the refractive index of the medium $n$. This refractive index is related to the group velocity $v_g$ of our incident light which will affect the overall behaviour of light through the medium.\\
+Firstly, we will review some basic concepts regarding light-matter interaction. When discussing about light-matter interaction especially the phenomenon where light is in incident on a medium, the most important properties that we need to consider to analyze the behaviour of light wave through this medium is the properties of the medium itself. The medium for light-matter interaction is mainly characterized by the refractive index of the medium $n$. This refractive index is related to the group velocity $v_g$ of our incident light which will affect the overall behaviour of light through the medium.
+
+\newpage
 
 If we have a pulse of wave that consists of a spectrum of frequencies $\Delta\omega$, each light with different frequency will have different group velocity going through the medium based on the relationship between group velocity $v_g$ and refractive index $n$ of the material as shown below;
 
 \begin{gather}
-	v_g = v_p - \frac{c}{n^2} \dv{n}{k}\\
+	v_g = v_p - \frac{c}{n^2} \dv{n}{k} \label{eqn: groupVelocity}\\
 	\dv{n}{k} \propto \dv{n}{\omega}
 \end{gather}
 
-The group velocity of light pulse is what give rise to one of physical phenomenon of light, dispersion. Dispersion occurs because of the dielectric properties of the medium which are the results of dipole moments in the medium itself. One of the approximation that can be made in analysing dielectric medium with dipole moments like this is the well-known approximation, Lorentz oscillator approximation where we treat the dipoles in a medium as a classical harmonic oscillator. In addition to that, this Lorentz model also have its quantum version where the atom are modeled as dipole transition between 2 energy level of the dipole/atom.\\
+The group velocity of light pulse is what give rise to one of physical phenomenon of light, dispersion. Dispersion occurs because of the dielectric properties of the medium which are the results of dipole moments in the medium itself. One of the approximation that can be made in analysing dielectric medium with dipole moments like this is the well-known approximation, Lorentz oscillator approximation where we treat the dipoles in a medium as a classical harmonic oscillator. In addition to that, this Lorentz model also have its quantum version where the atom are modeled as dipole transition between 2 energy level of the dipole/atom.
 
 So, using the semiclassical model, we can analyze the light-matter interaction through various methods such as changing the medium/material and changing the modulation of the incident light. In this literature review, we will focus on the studies that have been done on light-matter interaction when the incident light is amplitude-modulated or phase-modulated. We will see later that, from these type of modulation, we can observe various optical effects such as stacked coherent transients \cite{Segard_1987} (later was identified as stacked optical precursors \cite{jeong2010slow}) and super-flash \cite{Kwong2014}.\\
 
-\section{Two-Level Transmitted Field and Optical Precursors}
-There are various types of coherent light-matter interaction in physics such as free-induction decay (FID), photon echo, optical precursor, superflash etc. But for this section, we will first review the general mathematical formulation for acquiring transmitted field in 2-level system and then near the end of this section, we will shift most of our focus for a moment to the theory of optical precursors which is one of the most interesting coherent transient light-matter interaction phenomena that is studied in the last 100 years. The reason for this is because it will serve as a basis for our further main discussion on the superflash phenomena. We will review it (precursors) concisely and historically from its first appearance in \cite{Sommerfeld1914, Brillouin1914} up till the recent/latest theory devised by current AMO physicist to better study optical precursors e.g. the hybrid-asymptotic analysis method that was proposed in \cite{Jeong2009} to acquire transmitted main signal and precursor signals (Sommerfeld and Brillouin component) in the asymptotic limit with clearer physical interpretation compared to the original asymptotic analysis \cite{Sherman1981}.\\
 
-In general, the study of coherent transient light-matter interaction can be said to be a subset of the more general problem of the study of pulse propagation through a medium. This medium can have various properties that will affect how the transient component and steady-state component of our pulse evolve over time as it propagates through the medium. So, basically what we want to know is, given our input pulse as a function of time at the entry of the medium $E_{0}(t, z = 0)$, we want to know how this medium respond to the input signal and change it at the exit point of the medium giving us $E_{t}(t, z = L)$ where $L$ is the medium's thickness. This output signal is crucially determined by the type of medium either it is isotropic, homogeneous, non-homogeneous, dispersive, lossy and many more factors.\\
+\section{Two-Level Transmitted Field and Optical Precursors}
+There are various types of coherent light-matter interaction in physics such as free-induction decay (FID), photon echo, optical precursor, superflash etc. But for this section, we will first review the general mathematical formulation for acquiring transmitted field in 2-level system and then near the end of this section, we will shift most of our focus for a moment to the theory of optical precursors which is one of the most interesting coherent transient light-matter interaction phenomena that is studied in the last 100 years. The reason for this is because it will serve as a basis for our further main discussion on the superflash phenomena. We will review it (precursors) concisely and historically from its first appearance in \cite{Sommerfeld1914, Brillouin1914} up till the recent/latest theory devised by current AMO physicist to better study optical precursors e.g. the hybrid-asymptotic analysis method that was proposed in \cite{Jeong2009} to acquire transmitted main signal and precursor signals (Sommerfeld and Brillouin component) in the asymptotic limit with clearer physical interpretation compared to the original asymptotic analysis \cite{Sherman1981}.
+
+In general, the study of coherent transient light-matter interaction can be said to be a subset of the more general problem of the study of pulse propagation through a medium. This medium can have various properties that will affect how the transient component and steady-state component of our pulse evolve over time as it propagates through the medium. So, basically what we want to know is, given our input pulse as a function of time at the entry of the medium $E_{0}(t, z = 0)$, we want to know how this medium respond to the input signal and change it at the exit point of the medium giving us $E_{t}(t, z = L)$ where $L$ is the medium's thickness. This output signal is crucially determined by the type of medium either it is isotropic, homogeneous, non-homogeneous, dispersive, lossy and many more factors.
 
 In addition to that, historically, the study of coherent transient pulse propagation was initially studied from 2 different framework. The 1st framework could be considered as \textit{classical} in a sense. It is based on the forerunner/precursor theory introduced by Sommerfeld and Brillouin as can be seen in \cite{Sommerfeld1914, Brillouin1914}. While in the 2nd framework, the approach can be said to be more \textit{non-classical} involving coherent interactions between the input pulse with the excited energy state and non-excited energy state of the atoms/molecules comprising the medium. One of the first papers that had used this (coherent interaction) approach is in \cite{Crisp1970}. Initially, researchers thought that both this framework are 2 distinct methods and are not linked to each other because of the different time scales used to  define the pulse propagation problem. This can be seen from how both papers \cite{Segard_1987, Crisp1970} had taken completely different approach/method even though both are studying coherent transient pulses. But, fortunately in recent study, this misunderstanding had been resolved in \cite{Jeong2008} where they succeeded in showing analytically that both approaches are actually describing the same physical phenomenon.
 
@@ -30,6 +33,8 @@ In this section, we will look at how the transmitted signal $E_{t}(t, z)$can be 
     n(\omega) = \sqrt{\varepsilon_{r}(\omega)} = \sqrt{1 - \frac{\omega_{p}^{2}}{\omega^{2} - \omega_{0}^{2} + i2\Gamma\omega}}
     \label{eqn: nw}
 \end{equation}
+
+\newpage
 
 Where;
 
@@ -53,7 +58,9 @@ Next, we assume we are dealing with plane waves that are propagating through the
     \label{eqn: scalarMaxwellWaveEquation}
 \end{equation}
 
-To solve this partial differential equation more easily, we apply the Fourier transform to the whole equation as done in \cite{jackson1999classical} or many other electromagnetism textbook giving us;
+\newpage
+
+To solve Equation \ref{eqn: scalarMaxwellWaveEquation}, we apply the Fourier transform to the whole equation as done in \cite{jackson1999classical} or many other electromagnetism textbook giving us;
 
 \begin{align}
 	\pdv[2]{E(\omega, z)}{z} + \frac{\omega^{2}}{c^{2}} E(\omega, z) + \frac{4\pi\omega^{2}}{c^{2}} P(\omega, z) &= 0\\
@@ -81,6 +88,8 @@ The spectrum of the incident pulse $E(\omega, 0)$ are usually expressed as the F
     E(\omega, 0) = \int_{-\infty}^{+\infty} \dd{t} e^{-i\omega t} E(t, 0)
 \end{equation}
 
+\newpage
+
 To get the transmitted electric field in the time-domain, as done in \cite{Jeong2011}, we apply inverse Fourier transform to Equation \ref{eqn: ezw} to get;
 
 \begin{equation}
@@ -88,44 +97,45 @@ To get the transmitted electric field in the time-domain, as done in \cite{Jeong
     \label{eqn: ezta}
 \end{equation}
 
-Where $a$ is a positive definite real constant. So, this is the most general expression for the transmitted field through a medium that is linear, dielectric, dispersive and non-magnetic. Going further from this, we need to specify our type of modulation of the input pulse whether it is modulated by a (Heaviside) step function, square/rectangular function, Gaussian function or even impulse/delta function. From the specification of the modulation of the input pulse, then we would able to find the solution (not necessarily analytic, usually a numerical or an approximate solution) to the transmitted electric field as can be seen in various papers such as in \cite{Jeong2011}, \cite{Jeong2010} and \cite{Oughstun1988} for (Heaviside) step modulation, square/rectangular modulation and delta function pulse respectively.\\
+Where $a$ is a positive definite real constant. So, this is the most general expression for the transmitted field through a medium that is linear, dielectric, dispersive and non-magnetic. Going further from this, we need to specify our type of modulation of the input pulse whether it is modulated by a (Heaviside) step function, square/rectangular function, Gaussian function or even impulse/delta function. From the specification of the modulation of the input pulse, then we would able to find the solution (not necessarily analytic, usually a numerical or an approximate solution) to the transmitted electric field as can be seen in various papers such as in \cite{Jeong2011}, \cite{jeong2010slow} and \cite{Oughstun1988} for (Heaviside) step modulation, square/rectangular modulation and delta function pulse respectively.
 
 \subsection{Optical Forerunners/Precursors}\label{precursor}
-Now, in this section, we will shift the focus for a while on the idea of optical precursors as one of the phenomena in coherent transient interaction. This will serve as our starting point to understand the main focus of this literature review that is on the superflash phenomena. The idea of optical precursor or initially known as optical forerunner dates back to the early 1900s (1914) when it was first discovered by Sommerfeld and his student, Brillouin as they were studying the propagation of light pulse through a medium. The English-translated version of their original paper can be found in \cite{brillouin1969wave}. The main problem that they were trying to solve/understand was the problem of information velocity of a pulse through a medium. Is it possible for information that is carried in an electromagnetic (EM) wave to travel faster than the vacuum speed of light? What is the consequences if this is true? Would causality break or there is actually a new mechanism/theory that would prevent this from happening?\\
+Now, in this section, we will shift the focus for a while on the idea of optical precursors as one of the phenomena in coherent transient interaction. This will serve as our starting point to understand the main focus of this literature review that is on the superflash phenomena. The idea of optical precursor or initially known as optical forerunner dates back to the early 1900s (1914) when it was first discovered by Sommerfeld and his student, Brillouin as they were studying the propagation of light pulse through a medium. The English-translated version of their original paper can be found in \cite{brillouin1969wave}. The main problem that they were trying to solve/understand was the problem of information velocity of a pulse through a medium. Is it possible for information that is carried in an electromagnetic (EM) wave to travel faster than the vacuum speed of light? What is the consequences if this is true? Would causality break or there is actually a new mechanism/theory that would prevent this from happening?
 
-In their work, they constrained their research to a certain type of incident pulse and a certain type of material properties. They considered an incident pulse that is modulated step-wise and the carrier frequency of this signal is far-off resonance with respect to the medium's resonant frequency. For the medium itself, they considered a medium that is linear, dielectric, nonmagnetic and dispersive. Later, they found out that for their specific problem setup, the front of the step-on pulse (the point at which the signal is switched on), travels exactly at the vacuum speed of light $c$. So, the information carried by a pulse signal are limited by the vacuum speed of light $c$. Causality is preserved and the theory of Special Relativity by Einstein are not violated by any superluminal information transfer.\\
+In their work, they constrained their research to a certain type of incident pulse and a certain type of material properties. They considered an incident pulse that is modulated step-wise and the carrier frequency of this signal is far-off resonance with respect to the medium's resonant frequency. For the medium itself, they considered a medium that is linear, dielectric, nonmagnetic and dispersive. Later, they found out that for their specific problem setup, the front of the step-on pulse (the point at which the signal is switched on), travels exactly at the vacuum speed of light $c$. So, the information carried by a pulse signal are limited by the vacuum speed of light $c$. Causality is preserved and the theory of Special Relativity by Einstein are not violated by any superluminal information transfer.
 
-But, apart from this fact that speed of information is bounded by the speed of light in vacuum $c$, they also discovered an interesting behaviour of the transmitted light that appeared after the front of the pulse and before the steady-state signal. They noticed that there are 2 transient wave-packets that come from the frequency component in the spectrum of the incident pulse that is far-off from the medium's resonance frequency. Because of their far-off resonance frequency component, their signal are not absorbed making it seems like the medium are transparent to these 2 transient wave-packets. At that time, they identified the high-frequency transient component (relative to medium's resonant frequency) as the Sommerfeld's forerunner and the low-frequency transient component as Brillouin's forerunner ("forerunners" are now called "precursors", term coined by Stratton in \cite{Stratton1941}). But, in this text, to avoid confusion, we will use the terminology used in \cite{Macke2013} where they used the term "forerunner" for when the Sommerfeld and Brillouin transients are separated from each other and we use the term "precursors" when both of the forerunners completely overlaps each other.\\
+But, apart from this fact that speed of information is bounded by the speed of light in vacuum $c$, they also discovered an interesting behaviour of the transmitted light that appeared after the front of the pulse and before the steady-state signal. They noticed that there are 2 transient wave-packets that come from the frequency component in the spectrum of the incident pulse that is far-off from the medium's resonance frequency. Because of their far-off resonance frequency component, their signal are not absorbed making it seems like the medium are transparent to these 2 transient wave-packets. At that time, they identified the high-frequency transient component (relative to medium's resonant frequency) as the Sommerfeld's forerunner and the low-frequency transient component as Brillouin's forerunner ("forerunners" are now called "precursors", term coined by Stratton in \cite{Stratton1941}). But, in this text, to avoid confusion, we will use the terminology used in \cite{Macke2013} where they used the term "forerunner" for when the Sommerfeld and Brillouin transients are separated from each other and we use the term "precursors" when both of the forerunners completely overlaps each other.
 
-In terms of solution/expression for the transmitted field in time-domain, it can be described by Equation \ref{eqn: ezta} in the forerunner/precursor framework introduced by Sommerfeld and Brillouin. Other alternative method of describing coherent transient are the coherent interactions formalism as mentioned earlier in this thesis. This approach was devised in the late 1960s to study the short-pulse propagation problem. One of the earliest work that can be seen applying this method is in \cite{Crisp1970}.\\
+In terms of solution/expression for the transmitted field in time-domain, it can be described by Equation \ref{eqn: ezta} in the forerunner/precursor framework introduced by Sommerfeld and Brillouin. Other alternative method of describing coherent transient are the coherent interactions formalism as mentioned earlier in this thesis. This approach was devised in the late 1960s to study the short-pulse propagation problem. One of the earliest work that can be seen applying this method is in \cite{Crisp1970}.
 
-In solving Equation \ref{eqn: ezta}, there are various methods and approximations need to be employed because generally the equation doesn't have elegant analytical solution except for some special cases. One of the most famous method for solving the transmitted field  is through modern numerical methods/simulations such as Fast Fourier Transform (FFT) and numerical asymptotic method. Both of this numerical methods have been widely used by many researchers in acquiring the transmitted field for a certain pulse propagation problem.\\
+In solving Equation \ref{eqn: ezta}, there are various methods and approximations need to be employed because generally the equation doesn't have elegant analytical solution except for some special cases. One of the most famous method for solving the transmitted field  is through modern numerical methods/simulations such as Fast Fourier Transform (FFT) and numerical asymptotic method. Both of this numerical methods have been widely used by many researchers in acquiring the transmitted field for a certain pulse propagation problem.
 
-For the method of FFT, it is based on equation \ref{eqn: ezta}. Basically, the usual procedure is by taking the inverse Fourier transform (Inverse Fast Fourier Transform (IFFT)) of the product of the spectrum of input signal $E_{0}(\omega, z = 0)$ with the transfer function $e^{i k(\omega) z}$ that characterize the medium response. From the numerical data acquired from this IFFT, we will be able to plot the transmitted field immediately outside of the medium as a function of time $E_{t}(t, z = L)$ where $L$ is the medium's thickness. This is the procedure that are typically involved in acquiring the transmitted signal using FFT/IFFT method. In addition to that, FFT/IFFT are also the method that is most commonly utilized because of its simplicity in application and producing valid results. Many papers studying precursors implement FFT/IFFT in their research as can be seen in \cite{Chen2010, Macke2013, MacKe2009, Oughstun2010, Wei2009, Jeong2008, Jeong2010}.\\
+For the method of FFT, it is based on equation \ref{eqn: ezta}. Basically, the usual procedure is by taking the inverse Fourier transform (Inverse Fast Fourier Transform (IFFT)) of the product of the spectrum of input signal $E_{0}(\omega, z = 0)$ with the transfer function $e^{i k(\omega) z}$ that characterize the medium response. From the numerical data acquired from this IFFT, we will be able to plot the transmitted field immediately outside of the medium as a function of time $E_{t}(t, z = L)$ where $L$ is the medium's thickness. This is the procedure that are typically involved in acquiring the transmitted signal using FFT/IFFT method. In addition to that, FFT/IFFT are also the method that is most commonly utilized because of its simplicity in application and producing valid results. Many papers studying precursors implement FFT/IFFT in their research as can be seen in \cite{Chen2010, Macke2013, MacKe2009, Oughstun2010, Wei2009, Jeong2008, jeong2010slow}.
 
 Beside FFT/IFFT, researchers also implement numerical asymptotic method. This numerical method is based on the theory of asymptotic analysis. Asymptotic analysis are involved when we used the stationary-phase approximation in solving for the transmitted field. This numerical method provides the distinction between the Sommerfeld and Brillouin precursors but its main issue is the mathematical complexity involved. Even though the result is accurate, the theory of asymptotic analysis that is the basis for numerical asymptotic method are quite complicated and most of the time doesn't even give much insight on the physical interpretation of the result. Even then, it is quite useful in some case for studying optically thin medium when asymptotic approximation are applicable. Some other paper that is found applying numerical asymptotic method in their analysis is in \cite{Jeong2009}. Apart from that, for a more detailed explanations and derivations of asymptotic analysis regarding pulse propagation, please refer to for example \cite{Oughstun2019}.
+
 
 \section{Theoretical Treatment of Coherent Flash/Superflash}
 In general, the theoretical formulation for the transmitted field $E_{t}(t, z)$ of an incident field $E_{0}(t, z)$ through a linear, dispersive, non-magnetic medium can be described with the frequency-domain linear dispersion theory as shown in Section 2.1 where it involves taking the inverse Fourier transform of transmitted field spectrum $E_{t}(\omega, z)$ to acquire time-domain transmitted field $E_{t}(t, z)$. So, in this section we will first briefly review the concepts involved in acquiring the transmitted field $E_{t}(t, z)$ for an incident pulse propagating in 2-level medium. To the end of this section, we will review a 3-level Electromagnetically Induced Transparency (EIT) medium. This different formulation is the formulation that become the starting point for this FYP (study the behaviour of superflash in 3-level EIT medium). We will see in further discussion that some parts of the equations involved for the transmitted field $E_{t}(t, z)$ in 3-level EIT medium is acquired from a paper that is researching the optical precursors in 3-level medium \cite{jeong2010slow}.
 
 \subsection{Transmitted Field $E_{t}(t, z)$ in 2-Level Medium}
-As shown briefly in Section \ref{general}, solution of scalar Maxwell's wave equation (Equation \ref{eqn: scalarMaxwellWaveEquation}), we obtained an expression for the transmitted field in the frequency-domain in Equation \ref{eqn: ezw} re-written here;
+As shown briefly in Section \ref{general}, solution of the scalar Maxwell's wave equation (Equation \ref{eqn: scalarMaxwellWaveEquation}), we obtained an expression for the transmitted field in the frequency-domain in Equation \ref{eqn: ezw} re-written here;
 
 \begin{equation}
     E_{t}(\omega, z) = E_{0}(\omega, z) e^{ik(\omega)z}
     \label{eqn: transmittedFieldSpectrum}
 \end{equation}
 
-Where, $E_{0}(\omega, z)$, $e^{ik(\omega)z}$ and $k(\omega)$ respectively are the spectrum of the incident field; transfer function related to the medium response that characterizes the transmission; and the wave-number for each wave with different frequency contained in the incident field.\\
+Where, $E_{0}(\omega, z)$, $e^{ik(\omega)z}$ and $k(\omega)$ respectively are the spectrum of the incident field; transfer function related to the medium response that characterizes the transmission; and the wave-number for each wave with different frequency contained in the incident field.
 
 Next, to progress further from Equation \ref{eqn: transmittedFieldSpectrum}, before an inverse Fourier transform is employed, both the characteristic of the medium (related to the medium's refractive index $n(\omega)$ through $k(\omega) = \frac{w_{0}}{c} n(\omega)$) and the incident field (related to the type of modulation applied to the incident probe laser) must be specified. For example, as can be seen in \cite{Chalony2011, Kwong2014, Kwong2015}, all of the papers used the definition of refractive index as;
 
 \begin{equation}
-    n(\omega) = 1 + \frac{\rho \alpha(\omega)}{2}
+    n(\omega) = 1 + \frac{\rho_{0} \alpha(\omega)}{2}
     \label{eqn: refractiveIndex}
 \end{equation}
 
-Where, $\rho$ and $\alpha(\omega)$ are the medium number density and 2-level atomic polarizability respectively.\\
+Where, $\rho_{0}$ and $\alpha(\omega)$ are the medium number density and 2-level atomic polarizability respectively.
 
 As referenced by all of the 3 mentioned papers above, Equation \ref{eqn: refractiveIndex} is derived in \cite{hecht1974optics}. Next, the 2-level atomic polarizability is specified as Equation 4 in \cite{Kwong2014} and Equation 2 in \cite{Kwong2015} but it's not specified anywhere in \cite{Chalony2011}. Re-written here, it is expressed as;
 
@@ -141,7 +151,7 @@ Where;
     \item $c$ is the vacuum speed of light
     \item $\omega$ is the angular frequency
     \item $\Bar{v}$ is the atomic rms velocity 
-    \item $\Delta$ is the detuning of incident field from the medium resonance
+    \item $\Delta = \omega - \omega_{0}$ is the detuning of incident field from the medium resonance
     \item $k$ is the wave-number
 \end{itemize}
 
@@ -158,6 +168,23 @@ Where (The identical variable in Equation \ref{eqn: alphaGeneral} and Equation \
     \item $\omega_{0}$ is the resonant angular frequency of the medium
     \item $w\left(\frac{\omega - \omega_{0} + \frac{i\Gamma}{2}}{\sqrt{2}k\Bar{v}}\right)$ is the Faddeeva function that appears due to the convolution between the Lorentzian profile of the atomic polarizability, and the Gaussian velocity distribution \cite{Kwong2017} (More detailed derivation in \cite{abramowitz1965ia})
 \end{itemize}
+
+\newpage
+
+Substituting Equation \ref{eqn: alphaSolved} for $\alpha(\omega)$ in Equation \ref{eqn: refractiveIndex} will give us;
+
+\begin{equation}
+    n(\omega) = 1 + \frac{3i\rho_{0}\pi c^{3}}{\omega_{0}^{3}} \sqrt{\frac{\pi}{8}} \frac{\Gamma}{k\Bar{v}} w\left(\frac{\omega - \omega_{0} + \frac{i\Gamma}{2}}{\sqrt{2}k\Bar{v}}\right)
+\end{equation}
+
+Then, using the zero-temperature limit ($k\Bar{v} \rightarrow 0$) as done in \cite{Kwong2017}, we get;
+
+\begin{equation}
+    n(\omega) = 1 - \frac{3\rho_{0}\pi\Gamma c^{3}}{2\omega_{0}^{3}} \frac{1}{\Delta + \frac{i\Gamma}{2}}
+    \label{eqn: refractiveIndexZero}
+\end{equation}
+
+The usage of zero-temperature limit is to eliminate the velocity-dependence from Doppler broadening effect. We need this zero-temperature refractive index (Equation \ref{eqn: refractiveIndexZero}) here so we can compare its equivalence with another expression of the 2-level refractive index in Equation \ref{eqn: refractiveIndexReduced}. We'll see later that Equation \ref{eqn: refractiveIndexReduced} is actually reduced from the 3-level EIT medium refractive index.
 
 So, using $k(\omega) = \frac{\omega_{0}}{c}n(\omega)$, Equation \ref{eqn: refractiveIndex} and \ref{eqn: alphaSolved}, we can solve for the frequency-domain transmitted field in Equation \ref{eqn: transmittedFieldSpectrum}. This frequency-domain transmitted field can be (inverse) Fourier-transformed to get the time-domain transmitted field $E_{t}(t, z)$. Both the process of finding the spectrum of incident field $E_{0}(\omega, z)$ and the time-domain of transmitted field $E_{t}(t, z)$ can be done numerically by applying the Fast Fourier Transform (FFT) and Inverse Fast Fourier Transform (IFFT) respectively. More details on this numerical application will be discussed in Section \ref{numerical}.
 
@@ -188,9 +215,9 @@ Where;
     \item $\Omega_{c}$ is the Rabi frequency of the incident coupling laser
 \end{itemize}   
 
-So, proceeding from here, the procedure to get the transmitted field $E_{t}(t, z)$ are exactly identical as been done for 2-level medium (involving FFT of incident field and IFFT of transmitted field spectrum) but with the new definition for electric susceptibility $\chi(\omega)$ for 3-level EIT system as shown in Equation \ref{eqn: chi(w)}.\\
+So, proceeding from here, the procedure to get the transmitted field $E_{t}(t, z)$ are exactly identical as been done for 2-level medium (involving FFT of incident field and IFFT of transmitted field spectrum) but with the new definition for electric susceptibility $\chi(\omega)$ for 3-level EIT system as shown in Equation \ref{eqn: chi(w)}.
 
-Technically, this "new" expression for $\chi(\omega)$ that will be used in Equation \ref{eqn: refractiveIndex3Level} are the generalization for the refractive index that was acquired for 2-level medium in \cite{Kwong2017}. To see this, we first take the Binomial expansion of Equation \ref{eqn: refractiveIndex3Level} up to the 2nd term only to represent the refractive index;
+Technically, this "new" expression for $\chi(\omega)$ that will be used in Equation \ref{eqn: refractiveIndex3Level} are the generalization for the refractive index that was acquired for 2-level medium in \cite{Kwong2017}. To see this, we take the Binomial expansion of Equation \ref{eqn: refractiveIndex3Level} only up to the 2nd term to represent the refractive index;
 
 \begin{equation}
     n(\omega) = 1 + \frac{\chi(\omega)}{2}
@@ -223,6 +250,8 @@ Notice that when the incident coupling laser is not present reducing the 3-level
     \label{eqn: refractiveIndexReduced}
 \end{equation}
 
+\newpage
+
 So, by using the notations below we can "convert" from Equation \ref{eqn: refractiveIndexReduced} to \ref{eqn: refractiveIndex2Level}, we realize that both are equivalent but seems different because of the notations used.
 
 \begin{itemize}
@@ -239,7 +268,7 @@ From \cite{boyd2020nonlinear}, the evolution of the density matrix elements of a
     \Dot{\rho}_{nm} &= \frac{1}{i\hbar} [H, \rho]_{nm} - \gamma_{nm} \rho_{nm}, \space n \neq m \label{eqn: rhoCoherence}\\
     \Dot{\rho}_{nn} &= \frac{1}{i\hbar} [H, \rho]_{nn} + \sum_{E_{m} > E_{n}} \Gamma_{nm}\rho_{mm} - \sum_{E_{m} < E_{n}} \Gamma_{mn} \rho_{nn} \label{eqn: rhoPopulation}
 \end{align} 
-    
+
 Where;
 
 \begin{itemize}
@@ -279,6 +308,7 @@ Where;
     \item $\omega_{c}$ is the angular frequency of the incident coupling laser coupling the state $\ket{e}$ and $\ket{c}$
 \end{itemize}
 
+\newpage
 
 So, using Equation \ref{eqn: rhoCohNew} and \ref{eqn: rhoPopNew} and the newly-defined density matrix elements, we can get a total of $6$ coupled equations to solve for $\sigma_{gg}$, $\sigma_{ee}$, $\sigma_{cc}$, $\sigma_{eg}$, $\sigma_{ec}$ and $\sigma_{cg}$.
 
@@ -299,6 +329,8 @@ Where;
     \item $\Delta_{p} = \omega_{p} - \omega_{eg}$ is the detuning of the probe beam. $\omega_{eg}$ is the transition frequency between level $\ket{e}$ and $\ket{g}$
     \item $\Delta_{c} = \omega_{c} - \omega_{ec}$ is the detuning of the coupling beam. $\omega_{ec}$ is the transition frequency between level $\ket{e}$ and $\ket{c}$
 \end{itemize}
+
+\newpage
 
 Note that, in obtaining Equation \ref{eqn: 1st} until \ref{eqn: final}, we also implemented the Rotating Wave Approximation (RWA) \cite{boyd2020nonlinear}. Now, the coupled equations (\ref{eqn: 1st} until \ref{eqn: final}) can be solved by equating all of it to $0$ signifying that the solution is a steady-state solution $\dv{\vb{\hat{\sigma}}}{t} = 0$. Another simplification that is made is, we assume an on-resonance incident coupling laser therefore $\Delta_{c} = 0$. With all these assumptions and simplifications, we can get $\sigma_{eg}$ that is related to the electric susceptibility of our 3-level EIT medium. $\sigma_{eg}$ is expressed as;
 
@@ -327,6 +359,8 @@ Next, using the definition for $\rho_{ii}$ and $\rho_{ij}$'s from Equation \ref{
     \label{eqn: chi}
 \end{equation}
 
+\newpage
+
 So, substituting $\sigma_{eg}$ from Equation \ref{eqn: sigmaeg} into Equation \ref{eqn: chi} and simplifying, we will finally get the explicit expression for the electric susceptibility $\chi(\Delta_{p})$ for our 3-level EIT medium. It is expressed as;
 
 \begin{equation}
@@ -340,27 +374,29 @@ This expression will be used in the definition of medium refractive index $n(\De
 In the previous section, we had discussed about the 2 different expression of the medium refractive index where we had found that the second expression (for 3-level EIT medium) is a generalization of the first expression (for 2-level medium). In this section, we will discuss briefly about the typical numerical approach in simulating the transmitted field of an incident pulse signal. In general, the most well-known method of simulating the transmitted field is using Discrete Fourier Transform (DFT) by utilizing the widely known Fast Fourier Transform (FFT) algorithm. In this subsection, the main focus will be on introducing this FFT/IFFT numerical approach and discussing the results from some papers that had applied these numerical method in their research. Finally, to the end of this section, we discuss on the specific details of the FFT/IFFT code that is applied in this FYP development.
 
 \subsection{Fast Fourier Transform (FFT)}
-Fast Fourier Transform (FFT) is an algorithm to compute the Discrete Fourier Transform (DFT) of sequence of complex numbers. There are many algorithms to do this but FFT are one of the fastest algorithm as of right now. Their use is to obtain the spectrum or frequency components of a signal. In our case, because we are trying to get the transmitted field in the time domain, we are actually using the inverse version of FFT known as Inverse Fast Fourier Transform (IFFT). The advantages of FFT algorithm in calculating DFT is in its operation/computing size. The first published work introducing the FFT is in \cite{Cooley1965} where they had reduced the computing size of DFT from requiring $N^2$ arithmetic operation to $N \log(N)$ arithmetic operation. This is absolutely a significant reduction as $N$ becomes larger.\\
+Fast Fourier Transform (FFT) is an algorithm to compute the Discrete Fourier Transform (DFT) of sequence of complex numbers. There are many algorithms to do this but FFT are one of the fastest algorithm as of right now. Their use is to obtain the spectrum or frequency components of a signal. In our case, because we are trying to get the transmitted field in the time domain, we are actually using the inverse version of FFT known as Inverse Fast Fourier Transform (IFFT). The advantages of FFT algorithm in calculating DFT is in its operation/computing size. The first published work introducing the FFT is in \cite{Cooley1965} where they had reduced the computing size of DFT from requiring $N^2$ arithmetic operation to $N \log(N)$ arithmetic operation. This is absolutely a significant reduction as $N$ becomes larger.
 
 In general, the FFT algorithm can be applied in many programming language quite easily. For example, in Mathematica and Python, this can be done by utilizing their built-in packages that provides the tools for FFT and IFFT. The main idea is to apply the IFFT to obtain the transmitted signal in the time domain. The IFFT will be applied to the product of transfer function $e^{i k(\omega)z}$ (characterizing the medium response) and the input signal's initial spectrum $E_{0}(\omega, z = 0)$. This input signal's spectrum can be acquired by applying FFT to the input signal in the time domain $E_{0}(t, z = 0)$.
 
 \subsection{Utilization of FFT/IFFT in Researches}
-One of the papers that utilizes FFT in their research is \cite{Macke2013}. Their study was about the Sommerfeld and Brillouin forerunners that are generated when a step-modulated pulse propagates through a single-resonance Lorentz medium that is weakly dispersive. Their main achievement was to show the separation behaviour between Sommerfeld and Brillouin forerunners as they vary the optical depth using FFT (with aid of saddle points method) without making the slowly-varying approximation (SVA) that are usually employed in this case. In addition to that, the analytical expression for the transmitted field that they acquired using this method (FFT and saddle points) are very general and are applicable even when the Sommerfeld and Brillouin forerunners overlaps forming precursors. To demonstrate the reliability of FFT approach, we can look at one of their plot of the transmitted signal in Figure \ref{fig: fft}. We can see how well the FFT plot fit in with the other two plots from different approaches. So, this proves how reliable the FFT approach is when compared to other competing approaches.\\
+One of the papers that utilizes FFT in their research is \cite{Macke2013}. Their study was about the Sommerfeld and Brillouin forerunners that are generated when a step-modulated pulse propagates through a single-resonance Lorentz medium that is weakly dispersive. Their main achievement was to show the separation behaviour between Sommerfeld and Brillouin forerunners as they vary the optical depth using FFT (with aid of saddle points method) without making the slowly-varying approximation (SVA) that are usually employed in this case. In addition to that, the analytical expression for the transmitted field that they acquired using this method (FFT and saddle points) are very general and are applicable even when the Sommerfeld and Brillouin forerunners overlaps forming precursors. To demonstrate the reliability of FFT approach, we can look at one of their plot of the transmitted signal in Figure \ref{fig: fft}. We can see how well the FFT plot fit in with the other two plots from different approaches. So, this proves how reliable the FFT approach is when compared to other competing approaches.
 
 Another similar case where the researchers employed FFT can be seen in \cite{Jeong2008}. In the paper, their main objective was to draw a parallel between the idea of 0-$\pi$ pulses and optical precursors. To be specific, the point I want to emphasize relating to this FFT section of my writing is about how they employed FFT to compare the output of transmitted field without SVA and with SVA. From their plots as can be seen in Figure \ref{fig: svafft}, both plots agree with each other and this agreement between the outputs from different approaches allows them to use the approximated refractive index that had come from SVA assumptions in going further in their derivation. The crucial point here is the fact that they had used FFT approach to assess the validity of their approximation thus showing again how impactful and useful the FFT approach is in optical precursors research area.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale = 0.9]{fft}
+    \includegraphics[width = 0.7\textwidth]{fft}
     \caption{Plot of transmitted field from FFT (solid red line) compared to a) Simple solution from Equation 36 in \cite{Macke2013} and b) Saddle-point solution. Figure courtesy of \cite{Macke2013}.}
     \label{fig: fft}
 \end{figure}
 
-In summary, FFT approach are really useful as one of the numerical tool to simulate the transmitted field for a pulse propagation problem in research for coherent flash/superflash. As discussed here, FFT can be used to cross-check a certain different approach as done in \cite{Jeong2010} or used as a fitting tool to fit a numerical plot to an experimental data as demonstrated in \cite{Chen2010}. It can also be employed to derive an analytical expression for the transmitted field without using the slowly-varying approximation (SVA). It can also be used as assessment tool in validating an approximation that is made in certain derivation process as demonstrated in \cite{Jeong2008}. Aside from these 2 researches mentioned here, there are various papers out there that had used FFT approach either as their main tool in their research or as aiding tool in validation/comparison process between outputs. In addition to that, FFT/IFFT method are also very easy to apply and doesn't require too much complex derivations. Therefore, FFT/IFFT method are a valuable tool for researchers in progressing their research. For further reading on other papers that had similarly incorporated FFT in their research can be seen in \cite{Jeong2019, Jeong2010, Chen2010, Macke2015, Oughstun2010, Wei2009, MacKe2009}.
+\newpage
+
+In summary, FFT approach are really useful as one of the numerical tool to simulate the transmitted field for a pulse propagation problem in research for coherent flash/superflash. As discussed here, FFT can be used to cross-check a certain different approach as done in \cite{jeong2010slow} or used as a fitting tool to fit a numerical plot to an experimental data as demonstrated in \cite{Chen2010}. It can also be employed to derive an analytical expression for the transmitted field without using the slowly-varying approximation (SVA). It can also be used as assessment tool in validating an approximation that is made in certain derivation process as demonstrated in \cite{Jeong2008}. Aside from these 2 researches mentioned here, there are various papers out there that had used FFT approach either as their main tool in their research or as aiding tool in validation/comparison process between outputs. In addition to that, FFT/IFFT method are also very easy to apply and doesn't require too much complex derivations. Therefore, FFT/IFFT method are a valuable tool for researchers in progressing their research. For further reading on other papers that had similarly incorporated FFT in their research can be seen in \cite{Jeong2019, jeong2010slow, Chen2010, Macke2015, Oughstun2010, Wei2009, MacKe2009}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale = 0.9]{Figures/Capture.PNG}
+    \includegraphics[width = 0.7\textwidth]{Figures/Capture.PNG}
     \caption{Plot of absolute field envelope of transmitted field for a) SVA approach using approximated refractive index, Equation 5 in \cite{Jeong2008} and b) without SVA analysis, refractive index as Equation 4 in \cite{Jeong2008}. For both approach, the incident pulse is on-resonances and it was plotted for 3 different optical depth. Figure courtesy of \cite{Jeong2008}.}
     \label{fig: svafft}
 \end{figure}
