@@ -36,37 +36,33 @@ Even then, one of the main problem encountered by researchers in the observation
     \item The relative phase $\phi$ between input field $E_{0}(t, z)$ and transmitted field $E_{t}(t, z)$ are very small at a time scale that is smaller than the coherent flash initial decay time. But, at longer time scale, the relative phase value increase significantly until it reaches a constant value. Medium with higher OD have a larger value for the aforementioned constant value of the relative phase
 \end{itemize}
 
-\newpage
+Later, in the next few years after the paper \cite{Chalony2011} has been published, a new study on the super-flash phenomena as a special case \cite{Kwong2014}. This later paper focused more on the amplitude of the transmitted field instead of its decay time. They also shined laser light on an optically thick cold strontium atomic gas like in \cite{Chalony2011}. They observed a transmitted field with peak intensity more than 3 times the incident intensity. They concluded that this observed phenomena is possible because of the cooperative forward emission of the atoms in the target medium. The main difference between the observation of coherent flash/superflash in \cite{Kwong2014} and \cite{Chalony2011} is that the former introduced incident probe laser detuning $\Delta$ while the later didn't. Due to this detuning from medium resonance, they discovered that at certain detuning ($\abs{\delta} = 11.2 \Gamma$ in their experiment), they managed to get a transmitted signal with peak intensity about 3 times higher than incident intensity as in Figure \ref{fig: superflash}. The peak intensity for this super-flash is related to the FID mechanism involved in coherent flash. Basically, in coherent flash phenomena, the transmitted field $E_{t}$ are expressed as;
 
 \begin{figure}
     \centering
-    \includegraphics[width = 0.9\textwidth]{superflash}
-    \caption{Plot of normalized transmitted intensity $\frac{I_{t}(t)}{I_{0}}$ against time for detuning $\delta = 11.2\Gamma$. Red curve represents incident square pulse intensity. The black curve represents experimental data. The blue line is the level for $\frac{I_t}{I_0}$. The green open circle represents the value of $\frac{I_{s}}{I_{0}}$. Figure courtesy of \cite{Kwong2014}.}
+    \includegraphics[width = 0.9\textwidth]{Figures/superflash.JPG}
+    \caption{Plot of normalized transmitted intensity $\frac{I_{t}(t)}{I_{0}}$ against time for detuning $\delta = 11.2\Gamma$. Red curve represents incident square pulse intensity. The black curve represents experimental data. The blue line is the level for $\frac{I_t}{I_0}$. The green open circle represents the value of $\frac{I_{s}}{I_{0}}$. Figure courtesy of \protect\cite{Kwong2014}.}
     \label{fig: superflash}
 \end{figure}
-
-Later, in the next few years after the paper \cite{Chalony2011} has been published, a new study on the super-flash phenomena as a special case \cite{Kwong2014}. This later paper focused more on the amplitude of the transmitted field instead of its decay time. They also shined laser light on an optically thick cold strontium atomic gas like in \cite{Chalony2011}. They observed a transmitted field with peak intensity more than 3 times the incident intensity. They concluded that this observed phenomena is possible because of the cooperative forward emission of the atoms in the target medium. The main difference between the observation of coherent flash/superflash in \cite{Kwong2014} and \cite{Chalony2011} is that the former introduced incident probe laser detuning $\Delta$ while the later didn't. Due to this detuning from medium resonance, they discovered that at certain detuning ($\abs{\delta} = 11.2 \Gamma$ in their experiment), they managed to get a transmitted signal with peak intensity about 3 times higher than incident intensity as in Figure \ref{fig: superflash}. The peak intensity for this super-flash is related to the FID mechanism involved in coherent flash. Basically, in coherent flash phenomena, the transmitted field $E_{t}$ are expressed as;
 
 \begin{equation}
     E_{t} = E_{0} + E_{s}
 \end{equation}
 
-\begin{figure}[h!]
+Where $E_{t}$, $E_{0}$ and $E_{s}$ is the transmitted field, incident field and forward-scattered field respectively. For an on-resonance incident field, immediately before abrupt probe laser switch-off ($t = 0^{-}$), $E_{t} \approx 0$. So, $E_{s} = - E_{0}$. Then, immediately after probe switch-off, $E_{0} = 0$. So now, $E_{t} = E_{s}$. Therefore, combining this 2 resulting expression, we will get that $E_{t} = - E_{0}$ therefore giving us $I_{t} = I_{s}$. So, in the transient region immediately before and after probe switch-off, the transmitted intensity is directly related to the forward scattered intensity and in this case, equal to the forward scattered intensity. Therefore, this direct relationship between $I_{t}$ and $I_{s}$ in the region before/after abrupt probe switch-off is what allows for the transmitted intensity in Figure \ref{fig: superflash} to exceed the incident intensity when the incident field is detuned by a certain amount as shown in Figure \ref{fig: detuned}.
+
+\begin{figure}
     \centering
-    \includegraphics[width = 1\textwidth]{detuned}
-    \caption{Plot of normalized forward-scattered intensity against probe laser detuning. The green solid dots are experimental data. The black solid line is the theoretical prediction. Figure courtesy of \cite{Kwong2014}.}
+    \includegraphics[width = 1\textwidth]{Figures/detuned.JPG}
+    \caption{Plot of normalized forward-scattered intensity against probe laser detuning. The green solid dots are experimental data. The black solid line is the theoretical prediction. Figure courtesy of \protect\cite{Kwong2014}.}
     \label{fig: detuned}
 \end{figure}
-
-Where $E_{t}$, $E_{0}$ and $E_{s}$ is the transmitted field, incident field and forward-scattered field respectively. For an on-resonance incident field, immediately before abrupt probe laser switch-off ($t = 0^{-}$), $E_{t} \approx 0$. So, $E_{s} = - E_{0}$. Then, immediately after probe switch-off, $E_{0} = 0$. So now, $E_{t} = E_{s}$. Therefore, combining this 2 resulting expression, we will get that $E_{t} = - E_{0}$ therefore giving us $I_{t} = I_{s}$. So, in the transient region immediately before and after probe switch-off, the transmitted intensity is directly related to the forward scattered intensity and in this case, equal to the forward scattered intensity. Therefore, this direct relationship between $I_{t}$ and $I_{s}$ in the region before/after abrupt probe switch-off is what allows for the transmitted intensity in Figure \ref{fig: superflash} to exceed the incident intensity when the incident field is detuned by a certain amount as shown in Figure \ref{fig: detuned}.
 
 In addition to this, by conservation of energy, they showed that the forward-scattered intensity $I_{s}$ is limited by 4 times the incident intensity $I_{0}$. It is simply from the fact that;
 
 \begin{equation}
     E_{t} = E_{0} + E_{s} \leq E_{0}
 \end{equation}
-
-\newpage
 
 Taking the modulus-squared of both side of the equation;
 
@@ -76,14 +72,12 @@ Taking the modulus-squared of both side of the equation;
 
 They interpreted this as the allowed value of $E_{s}$. The allowed value of $E_{s}$ will be in a circle of radius $\abs{E_{0}}$ centered at $-E_{0}$. Therefore, the maximum value of $E_{s}$ is $E_{s} = -2 E_{0}$. So, taking the square of both sides for intensity they finally get upper bound for the forward-scattered intensity, $I_{s} \leq 4 I_{0}$. To show this, they plotted a colored plot representing the relation of the normalized forward-scattered intensity $\frac{I_{s}}{I_{0}}$ with 2 parameters, the detuning $\delta$ and the optical thickness (at resonance) $b_{0}$ as shown in Figure \ref{fig: I_s/I_0}. As we can clearly see from Figure \ref{fig: I_s/I_0}, when the white line that represents super-flash occurrence are extrapolated, it will eventually reach the theoretical upper bound $\frac{I_{s}}{I_{0}} = 4$.
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width = 1\textwidth]{IsI0}
-    \caption{Colored plot of $\frac{I_{s}}{I_{0}}$  against resonant optical thickness (non-zero temperature) $b_{\bar{v}}(\delta) = b_{\Bar{v}}(0)$ and detuning $\frac{\abs{\delta}}{\Gamma}$ for the temperature $T = 3.3(2) \mu K$. Black dashed line represents optical thickness of their experiment. The white solid line represents linear dependence of the detuning $\delta$ to the resonant optical thickness $b_{\bar{v}}(0)$ for when maximum value of $\frac{I_{s}}{I_{0}}$ occurs (super-flash). Figure courtesy of \cite{Kwong2014}.}
+    \includegraphics[width = 1\textwidth]{Figures/IsI0.png}
+    \caption{Colored plot of $\frac{I_{s}}{I_{0}}$  against resonant optical thickness (non-zero temperature) $b_{\bar{v}}(\delta) = b_{\Bar{v}}(0)$ and detuning $\frac{\abs{\delta}}{\Gamma}$ for the temperature $T = 3.3(2) \mu K$. Black dashed line represents optical thickness of their experiment. The white solid line represents linear dependence of the detuning $\delta$ to the resonant optical thickness $b_{\bar{v}}(0)$ for when maximum value of $\frac{I_{s}}{I_{0}}$ occurs (super-flash). Figure courtesy of \protect\cite{Kwong2014}.}
     \label{fig: I_s/I_0}
 \end{figure}
-
-\newpage
 
 Aside from the relation of the super-flash with optical thickness and the probe detuning, they also acquired a nice expression for the phase shift $\theta_{s}$ of the forward-scattered field $E_{s}$ relative to the incident field $E_{0}$. 
 
@@ -93,21 +87,23 @@ Aside from the relation of the super-flash with optical thickness and the probe 
 
 This phase shift angle can be summarized by their plot of $\frac{E_{s}}{E_{0}}$ in the complex plane as shown in Figure \ref{fig: theta_s}. Basically, the insight from Figure \ref{fig: theta_s} is that for a given optical thickness and temperature, as the detuning of probe laser changes, there will be various points that will represent point of normal coherent flashes or point of coherent super-flash. From the figure, they have already divided into region of super-flash (white-colored), normal flash (light grey region) and forbidden region because of energy conservation (dark grey region). They found out that at very large optical thickness, for most detunings, it will be in the super-flash region having relative phase shift $\frac{\pi}{2} \leq \theta_{s} \leq \frac{3\pi}{2}$. Meaning that there will be a number of super-flash events that could be observed when varying the detuning for a given constant high optical thickness. On the contrary, when the optical thickness is really small, the value of phase shift $\theta_{s}$ doesn't vary that much and are limited by the dashed line in Figure \ref{fig: theta_s} representing the normal coherent flash.
 
-Finally,  the interesting result from \cite{Kwong2014} is the production of positive or negative super-flashes. They did this by abruptly changing the phase of the incident field $E_{0}$ using an Electro-Optical Modulator (EOM). Their result are shown in Figure \ref{fig: eom}. So, depending on how the incident field $E_{0}$ interfere with forward-scattered field $E_{s}$ after its phase has been abruptly changed, it will result in either a superflash (constructive interference) or an antiflash (destructive interference). In their case, it is noticed that when the detuning of probe field from medium resonance are negative ($\delta = -19.3 \Gamma$) as in Figure \ref{fig: eom}a, it will result in a negative superflash while when the detuning are positive ($\delta = 20.7 \Gamma$) for Figure \ref{fig: eom}b, it results in a positive superflash.
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width = 0.6\textwidth]{theta_s}
-    \caption{Plot of $\frac{E_{s}}{E_{0}}$ on the complex plane. The color scale from purplish to blueish represents the probe detuning. The dark grey region, light grey region and white region represent the forbidden region (because energy conservation), the normal coherent flash region and the superflash region respectively. The solid circle and stars are the experimental data points. The transparent ellipses around the experimental data points represent the error estimate. The solid and dashed curves are the theoretical predictions for optical thickness $b_{0} = 19$ and $b_{0} = 3$ respectively. Both are at temperature $T = 3.3\mu K$. Figure courtesy of \cite{Kwong2014}.}
+    \includegraphics[width = 0.6\textwidth]{Figures/theta_s.JPG}
+    \caption{Plot of $\frac{E_{s}}{E_{0}}$ on the complex plane. The color scale from purplish to blueish represents the probe detuning. The dark grey region, light grey region and white region represent the forbidden region (because energy conservation), the normal coherent flash region and the superflash region respectively. The solid circle and stars are the experimental data points. The transparent ellipses around the experimental data points represent the error estimate. The solid and dashed curves are the theoretical predictions for optical thickness $b_{0} = 19$ and $b_{0} = 3$ respectively. Both are at temperature $T = 3.3\mu K$. Figure courtesy of \protect\cite{Kwong2014}.}
     \label{fig: theta_s}
 \end{figure}
 
-\begin{figure}[h!]
+Finally,  the interesting result from \cite{Kwong2014} is the production of positive or negative super-flashes. They did this by abruptly changing the phase of the incident field $E_{0}$ using an Electro-Optical Modulator (EOM). Their result are shown in Figure \ref{fig: eom}. So, depending on how the incident field $E_{0}$ interfere with forward-scattered field $E_{s}$ after its phase has been abruptly changed, it will result in either a superflash (constructive interference) or an antiflash (destructive interference). In their case, it is noticed that when the detuning of probe field from medium resonance are negative ($\delta = -19.3 \Gamma$) as in Figure \ref{fig: eom}a, it will result in a negative superflash while when the detuning are positive ($\delta = 20.7 \Gamma$) for Figure \ref{fig: eom}b, it results in a positive superflash.
+
+\begin{figure}
     \centering
-    \includegraphics[width = 0.75\textwidth]{eom}
+    \includegraphics[width = 0.75\textwidth]{Figures/eom.JPG}
     \caption{Plot of normalized transmitted intensity $\frac{I_{t}(t)}{I_{0}}$ against time $t$ with an abrupt phase change of $-0.4\pi$ on $E_{0}$ at $t = 0$. a) Probe detuning $\delta = -19.3\Gamma$. b) Probe detuning $\delta = 20.7\Gamma$. The insets are the representations of $E_{0}$, $E_{s}$ and $E_{t}$ on the complex plane at the time pointed by the arrow. Figure courtesy of \protect\citeNP{Kwong2014}.}
     \label{fig: eom}
 \end{figure}
+
+\newpage
 
 In summary, the 2 most important parameter in obtaining superflash effect for a pulse propagation through a cold atomic gas is;
 
@@ -120,10 +116,10 @@ From these insights discussed in \cite{Kwong2014}, further research through my f
 
 In this next paper \cite{Kwong2015}, they studied the quality of the superflash train generated from phase-modulation of the incident field. The "quality" of the superflash train are quantified by the pulse contrast  $\frac{I_{c}}{I_{0}}$ and the transfer efficiency $\frac{\expval{I_{}t}}{I_{0}}$. $I_{c}$ is defined as $I_{c} = max\{I_{t}\} - \expval{I_{t}}$ where $max\{I_{t}\}$ and $\expval{I_{t}}$ are the maximum value of transmitted intensity and the mean value of transmitted intensity respectively. Also, transmitted intensity is defined as $\expval{I_{t}} = \frac{1}{T_{R}} \int_{T_{R}} \dd{t} I_{t}(t)$. Their results/plots are summarised in Figure \ref{fig: contrast}.
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width = 0.7\textwidth]{contrast}
-    \caption{Plot of pulse contrast $\frac{I_{c}}{I_{0}}$ and transfer efficiency $\frac{\expval{I_{t}}}{I_{0}}$ against pulse repetition time $T_{R}$. a) Incident field without detuning. b) Incident field with detuning $\abs{\delta} = 11.3 \Gamma$. Red solid circle and red solid curve are experimental values and theoretical prediction of the pulse contrast respectively. The blue open circles and blue dashed curve are the experimental values and theoretical predictions of the transfer efficiency respectively. Figure courtesy of \cite{Kwong2015}.}
+    \includegraphics[width = 0.7\textwidth]{Figures/contrast.JPG}
+    \caption{Plot of pulse contrast $\frac{I_{c}}{I_{0}}$ and transfer efficiency $\frac{\expval{I_{t}}}{I_{0}}$ against pulse repetition time $T_{R}$. a) Incident field without detuning. b) Incident field with detuning $\abs{\delta} = 11.3 \Gamma$. Red solid circle and red solid curve are experimental values and theoretical prediction of the pulse contrast respectively. The blue open circles and blue dashed curve are the experimental values and theoretical predictions of the transfer efficiency respectively. Figure courtesy of \protect\cite{Kwong2015}.}
     \label{fig: contrast}
 \end{figure}
 
