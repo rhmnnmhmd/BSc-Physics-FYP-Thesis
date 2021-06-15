@@ -5,8 +5,6 @@ Semi-classical physics combine classical physics and quantum physics where the i
 
 Firstly, we will review some basic concepts regarding light-matter interaction. When discussing about light-matter interaction especially the phenomenon where light is in incident on a medium, the most important properties that we need to consider to analyze the behaviour of light wave through this medium is the properties of the medium itself. The medium for light-matter interaction is mainly characterized by the refractive index of the medium $n$. This refractive index is related to the group velocity $v_g$ of our incident light which will affect the overall behaviour of light through the medium.
 
-\newpage
-
 If we have a pulse of wave that consists of a spectrum of frequencies $\Delta\omega$, each light with different frequency will have different group velocity going through the medium based on the relationship between group velocity $v_g$ and refractive index $n$ of the material as shown below;
 
 \begin{gather}
@@ -16,7 +14,7 @@ If we have a pulse of wave that consists of a spectrum of frequencies $\Delta\om
 
 The group velocity of light pulse is what give rise to one of physical phenomenon of light, dispersion. Dispersion occurs because of the dielectric properties of the medium which are the results of dipole moments in the medium itself. One of the approximation that can be made in analysing dielectric medium with dipole moments like this is the well-known approximation, Lorentz oscillator approximation where we treat the dipoles in a medium as a classical harmonic oscillator. In addition to that, this Lorentz model also have its quantum version where the atom are modeled as dipole transition between 2 energy level of the dipole/atom.
 
-So, using the semiclassical model, we can analyze the light-matter interaction through various methods such as changing the medium/material and changing the modulation of the incident light. In this literature review, we will focus on the studies that have been done on light-matter interaction when the incident light is amplitude-modulated or phase-modulated. We will see later that, from these type of modulation, we can observe various optical effects such as stacked coherent transients \cite{Segard_1987} (later was identified as stacked optical precursors \cite{jeong2010slow}) and super-flash \cite{Kwong2014}.\\
+So, using the semiclassical model, we can analyze the light-matter interaction through various methods such as changing the medium/material and changing the modulation of the incident light. In this literature review, we will focus on the studies that have been done on light-matter interaction when the incident light is amplitude-modulated or phase-modulated. We will see later that, from these type of modulation, we can observe various optical effects such as stacked coherent transients \cite{Segard_1987} (later was identified as stacked optical precursors \cite{jeong2010slow}) and super-flash \cite{Kwong2014}.
 
 
 \section{Two-Level Transmitted Field and Optical Precursors}
@@ -58,8 +56,6 @@ Next, we assume we are dealing with plane waves that are propagating through the
     \label{eqn: scalarMaxwellWaveEquation}
 \end{equation}
 
-\newpage
-
 To solve Equation \ref{eqn: scalarMaxwellWaveEquation}, we apply the Fourier transform to the whole equation as done in \cite{jackson1999classical} or many other electromagnetism textbook giving us;
 
 \begin{align}
@@ -87,8 +83,6 @@ The spectrum of the incident pulse $E(\omega, 0)$ are usually expressed as the F
 \begin{equation}
     E(\omega, 0) = \int_{-\infty}^{+\infty} \dd{t} e^{-i\omega t} E(t, 0)
 \end{equation}
-
-\newpage
 
 To get the transmitted electric field in the time-domain, as done in \cite{Jeong2011}, we apply inverse Fourier transform to Equation \ref{eqn: ezw} to get;
 
@@ -250,9 +244,7 @@ Notice that when the incident coupling laser is not present reducing the 3-level
     \label{eqn: refractiveIndexReduced}
 \end{equation}
 
-\newpage
-
-So, by using the notations below we can "convert" from Equation \ref{eqn: refractiveIndexReduced} to \ref{eqn: refractiveIndex2Level}, we realize that both are equivalent but seems different because of the notations used.
+So, by using the notations below we can "convert" from Equation \ref{eqn: refractiveIndexReduced} to \ref{eqn: refractiveIndex2Level} and vice versa. We realize that both are equivalent but seems different because of the notations used.
 
 \begin{itemize}
     \item Dephasing rate between energy level $\ket{e}$ and $\ket{g}$: $\gamma_{eg} = \frac{\Gamma}{2}$ where $\Gamma$ is the decay rate of the $\ket{e}$ energy level in the 3-level medium. 
@@ -290,7 +282,7 @@ We can then express Equation \ref{eqn: rhoCoherence} and \ref{eqn: rhoPopulation
     \Dot{\rho}_{nn} &= \frac{i}{\hbar} [V, \rho]_{nn} + \sum_{E_{m} > E_{n}} \Gamma_{nm}\rho_{mm} - \sum_{E_{m} < E_{n}} \Gamma_{mn} \rho_{nn} \label{eqn: rhoPopNew}
 \end{align}
 
-Because our medium is composed of a 3-level atoms, we first assign the state $\ket{g}$, $\ket{e}$ and $\ket{c}$ for the ground, excited and coupling state respectively. The schematic of the energy level can be seen in Figure \ref{fig: 3LevelAtom} \cite{jeong2010slow} ($\ket{1}$, $\ket{2}$ and $\ket{3}$ there is equivalent to $\ket{g}$, $\ket{c}$ and $\ket{e}$ respectively). Next, for convenience, we redefine our $\rho_{ij}$'s and $\rho_{ii}$'s as;
+Because our medium is composed of a 3-level atoms, we first assign the state $\ket{g}$, $\ket{e}$ and $\ket{c}$ for the ground, excited and coupling state respectively. The schematic of the energy level can be seen in Figure \ref{fig: 3LevelAtom} \cite{jeong2010slow} ($\ket{1}$, $\ket{2}$ and $\ket{3}$ over there is equivalent to $\ket{g}$, $\ket{c}$ and $\ket{e}$ respectively). Next, for convenience, we redefine our $\rho_{ij}$'s and $\rho_{ii}$'s as;
 
 \begin{align}
     \rho_{ii} &= \sigma_{ii} \label{eqn: rhoFirst}\\
@@ -381,22 +373,20 @@ In general, the FFT algorithm can be applied in many programming language quite 
 \subsection{Utilization of FFT/IFFT in Researches}
 One of the papers that utilizes FFT in their research is \cite{Macke2013}. Their study was about the Sommerfeld and Brillouin forerunners that are generated when a step-modulated pulse propagates through a single-resonance Lorentz medium that is weakly dispersive. Their main achievement was to show the separation behaviour between Sommerfeld and Brillouin forerunners as they vary the optical depth using FFT (with aid of saddle points method) without making the slowly-varying approximation (SVA) that are usually employed in this case. In addition to that, the analytical expression for the transmitted field that they acquired using this method (FFT and saddle points) are very general and are applicable even when the Sommerfeld and Brillouin forerunners overlaps forming precursors. To demonstrate the reliability of FFT approach, we can look at one of their plot of the transmitted signal in Figure \ref{fig: fft}. We can see how well the FFT plot fit in with the other two plots from different approaches. So, this proves how reliable the FFT approach is when compared to other competing approaches.
 
-Another similar case where the researchers employed FFT can be seen in \cite{Jeong2008}. In the paper, their main objective was to draw a parallel between the idea of 0-$\pi$ pulses and optical precursors. To be specific, the point I want to emphasize relating to this FFT section of my writing is about how they employed FFT to compare the output of transmitted field without SVA and with SVA. From their plots as can be seen in Figure \ref{fig: svafft}, both plots agree with each other and this agreement between the outputs from different approaches allows them to use the approximated refractive index that had come from SVA assumptions in going further in their derivation. The crucial point here is the fact that they had used FFT approach to assess the validity of their approximation thus showing again how impactful and useful the FFT approach is in optical precursors research area.
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width = 0.7\textwidth]{fft}
-    \caption{Plot of transmitted field from FFT (solid red line) compared to a) Simple solution from Equation 36 in \cite{Macke2013} and b) Saddle-point solution. Figure courtesy of \cite{Macke2013}.}
+    \includegraphics[width = 0.7\textwidth]{Figures/fft.JPG}
+    \caption{Plot of transmitted field from FFT (solid red line) compared to a) Simple solution from Equation 36 in \protect\cite{Macke2013} and b) Saddle-point solution. Figure courtesy of \protect\cite{Macke2013}.}
     \label{fig: fft}
 \end{figure}
 
-\newpage
+Another similar case where the researchers employed FFT can be seen in \cite{Jeong2008}. In the paper, their main objective was to draw a parallel between the idea of 0-$\pi$ pulses and optical precursors. To be specific, the point I want to emphasize relating to this FFT section of my writing is about how they employed FFT to compare the output of transmitted field without SVA and with SVA. From their plots as can be seen in Figure \ref{fig: svafft}, both plots agree with each other and this agreement between the outputs from different approaches allows them to use the approximated refractive index that had come from SVA assumptions in going further in their derivation. The crucial point here is the fact that they had used FFT approach to assess the validity of their approximation thus showing again how impactful and useful the FFT approach is in optical precursors research area.
 
-In summary, FFT approach are really useful as one of the numerical tool to simulate the transmitted field for a pulse propagation problem in research for coherent flash/superflash. As discussed here, FFT can be used to cross-check a certain different approach as done in \cite{jeong2010slow} or used as a fitting tool to fit a numerical plot to an experimental data as demonstrated in \cite{Chen2010}. It can also be employed to derive an analytical expression for the transmitted field without using the slowly-varying approximation (SVA). It can also be used as assessment tool in validating an approximation that is made in certain derivation process as demonstrated in \cite{Jeong2008}. Aside from these 2 researches mentioned here, there are various papers out there that had used FFT approach either as their main tool in their research or as aiding tool in validation/comparison process between outputs. In addition to that, FFT/IFFT method are also very easy to apply and doesn't require too much complex derivations. Therefore, FFT/IFFT method are a valuable tool for researchers in progressing their research. For further reading on other papers that had similarly incorporated FFT in their research can be seen in \cite{Jeong2019, jeong2010slow, Chen2010, Macke2015, Oughstun2010, Wei2009, MacKe2009}.
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width = 0.7\textwidth]{Figures/Capture.PNG}
-    \caption{Plot of absolute field envelope of transmitted field for a) SVA approach using approximated refractive index, Equation 5 in \cite{Jeong2008} and b) without SVA analysis, refractive index as Equation 4 in \cite{Jeong2008}. For both approach, the incident pulse is on-resonances and it was plotted for 3 different optical depth. Figure courtesy of \cite{Jeong2008}.}
+    \includegraphics[width = 1\textwidth]{Figures/Capture.PNG}
+    \caption{Plot of absolute field envelope of transmitted field for a) SVA approach using approximated refractive index, Equation 5 in \protect\cite{Jeong2008} and b) without SVA analysis, refractive index as Equation 4 in \protect\cite{Jeong2008}. For both approach, the incident pulse is on-resonances and it was plotted for 3 different optical depth. Figure courtesy of \protect\cite{Jeong2008}.}
     \label{fig: svafft}
 \end{figure}
+
+In summary, FFT approach are really useful as one of the numerical tool to simulate the transmitted field for a pulse propagation problem in research for coherent flash/superflash. As discussed here, FFT can be used to cross-check a certain different approach as done in \cite{jeong2010slow} or used as a fitting tool to fit a numerical plot to an experimental data as demonstrated in \cite{Chen2010}. It can also be employed to derive an analytical expression for the transmitted field without using the slowly-varying approximation (SVA). It can also be used as assessment tool in validating an approximation that is made in certain derivation process as demonstrated in \cite{Jeong2008}. Aside from these 2 researches mentioned here, there are various papers out there that had used FFT approach either as their main tool in their research or as aiding tool in validation/comparison process between outputs. In addition to that, FFT/IFFT method are also very easy to apply and doesn't require too much complex derivations. Therefore, FFT/IFFT method are a valuable tool for researchers in progressing their research. For further reading on other papers that had similarly incorporated FFT in their research can be seen in \cite{Jeong2019, jeong2010slow, Chen2010, Macke2015, Oughstun2010, Wei2009, MacKe2009}.
