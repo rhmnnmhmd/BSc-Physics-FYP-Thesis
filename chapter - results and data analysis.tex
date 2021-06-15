@@ -9,7 +9,7 @@ So, in this chapter, it will be divided to 4 sections. The 1st section in this c
 \section{Reproduction of Temporal Profiles}
 From Figure \ref{fig: comparing temporal profile 1}, we can see that the Python code developed through this project were able to simulate the transmission intensity temporal profile of \cite{jeong2010slow} successfully. This serve to show that the simulation code developed from this project (More details discussed in the Methodology chapter) are valid and reliable enough to be utilized as the main tool for researching the coherent superflash phenomena.
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/default2.png}
     \caption{Comparison of the transmitted intensity temporal profile for square light pulse incident on 3-level EIT-enabled medium. a) Plot of the temporal profile using hybrid analysis of \protect\cite{jeong2010slow} (solid blue curve) and using FFT (black dashed curve). Figure courtesy of \protect\cite{jeong2010slow}. b) Temporal profile for the same parameters generated from Python code developed in this project.}
@@ -24,14 +24,14 @@ The Figure \ref{fig: theta_s} that was taken from \cite{Kwong2014} summarized th
 
 This is also related to the cooperative emission effect that was mentioned in \cite{Kwong2014, Kwong2015, Kwong2017, Araujo2016} that is prevalent in optically thick medium. Its main effect is to reduce the decay time (inverse of atomic excited-state decay rate $\Gamma$) of the superflash itself by a certain different factors depending on the modulation of the incident field. The specific expression for these factors can be found in \cite{Kwong2017} and they also mentioned that there are a common factor even for different type of modulation that doesn't depend on the temperature of the medium or even the detuning of the probe field. The common factor is $\frac{2}{b_{0}(0)}$ where $b_{0}(0)$ are the resonant optical depth of the medium at zero-temperature which is the main parameter that governs this cooperative effect.
 
-\begin{figure}[h!]
+To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the incident probe laser detuning $\Delta$, some temporal profiles are shown in Figure \ref{fig: comparing temporal profile 2} but instead of zero-detuning case as produced by \cite{jeong2010slow} as shown in Figure \ref{fig: comparing temporal profile 1}a, the temporal profiles are for the case of non-zero detuning. Both are generated from the simulation code that is developed in this project.
+
+\begin{figure}
     \centering
-    \includegraphics[width = 1.1\textwidth]{Figures/compareTemporal3.png}
+    \includegraphics[width = 1\textwidth]{Figures/compareTemporal3.png}
     \caption{Transmission intensity temporal profile of an incident square pulse (pulse duration of $2\cdot10^{-6}$ sec) on cold, dilute atomic gas of Rb-85 with optical depth (OD) of 62 and coupling laser's Rabi frequency of $4.2\gamma_{eg}$ where $\gamma_{eg}$ is half of the natural linewidth $\gamma_{eg} = \frac{\Gamma_{e}}{2} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$. Each only have different probe detuning $\Delta$. a) $\Delta = 5.6764\gamma_{eg}$. b) $\Delta = 0.3714\gamma_{eg}$. c) $\Delta = 11.2467\gamma_{eg}$.}
     \label{fig: comparing temporal profile 2}
 \end{figure}
-
-To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the incident probe laser detuning $\Delta$, some temporal profiles are shown in Figure \ref{fig: comparing temporal profile 2} but instead of zero-detuning case as produced by \cite{jeong2010slow} as shown in Figure \ref{fig: comparing temporal profile 1}a, the temporal profiles are for the case of non-zero detuning. Both are generated from the simulation code that is developed in this project.
 
 We could get both the desired coherent superflash (Figure \ref{fig: comparing temporal profile 2}b and \ref{fig: comparing temporal profile 2}c) and the coherent antiflash also mentioned in \cite{Kwong2017} (Forward-scattered intensity lower than incident intensity. Figure \ref{fig: comparing temporal profile 2}a). In addition to that, the coherent superflash produced in Figure \ref{fig: comparing temporal profile 2}b and \ref{fig: comparing temporal profile 2}c are significantly higher than the one obtained in \cite{jeong2010slow} with a value of about $3I_{0}$. These values are approaching the upper limit value of $4I_{0}$ according to the discussion in \cite{Kwong2014}.
 
@@ -59,17 +59,17 @@ So, in this project, similar analysis have been done for a 3-level EIT medium to
 \section{Forward-Scattered Intensity Spectrum for 3-Level EIT Medium}
 In Figure \ref{fig: comparing Is spectrum}. The $I_{s}$ spectrum for a 3-level medium was compared. The parameters and important equations (e.g. electric susceptibility $\chi$) are based on \cite{jeong2010slow}. This idea of comparing the $I_{s}$ spectrum are inspired by Figure 1d of \cite{Kwong2014} where they had plotted the $I_{s}$ spectrum for their 2-level medium while in here it is done for a 3-level EIT medium. In Figure \ref{fig: comparing Is spectrum}a, even though it is a 3-level EIT medium, the $I_{s}$ spectrum are similar to a 2-level medium's spectrum for example the ones plotted in Figure 1d of \cite{Kwong2014} which is a 2-level medium. This is because the coupling laser's Rabi frequency $\Omega_{c}$ is set to $0$. The coupling laser's Rabi frequency $\Omega_{c}$ basically acts as a "switch" for the EIT effect. When it is "switched-off", the coupling between the 3rd new coupling energy level $\ket{c}$ with the excited-state energy level $\ket{e}$ doesn't occur therefore no EIT effect present. A nice schematic of this said energy levels configuration from \cite{Jeong2009} can be seen in Figure \ref{fig: 3LevelAtom}.
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/compareSpectral.png}
     \caption{The forward-scattered intensity detuning spectrum ($I_{s}$ spectrum from now on) for the same initial parameters but a) Without EIT (Coupling laser's Rabi frequency $\Omega_{c} = 0$) while b) With EIT (Coupling laser's Rabi frequency $\Omega_{c} = 4.2\gamma_{eg}$ where $\gamma_{eg} = 1.885 \cdot 10^{7} \frac{rad}{sec}$).}
     \label{fig: comparing Is spectrum}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics[width = 0.5\textwidth]{Figures/3LevelAtom.png}
-    \caption{Note that the different notation used here for the energy levels. $\ket{1}$ is equivalent to $\ket{g}$. $\ket{2}$ is equivalent to $\ket{c}$. $\ket{3}$ is equivalent to $\ket{e}$. Figure courtesy of \cite{Jeong2009}.}
+    \caption{Note that the different notation used here for the energy levels. $\ket{1}$ is equivalent to $\ket{g}$. $\ket{2}$ is equivalent to $\ket{c}$. $\ket{3}$ is equivalent to $\ket{e}$. Figure courtesy of \protect\cite{Jeong2009}.}
     \label{fig: 3LevelAtom}
 \end{figure}
 
@@ -81,38 +81,32 @@ Through combining some crucial ideas from \cite{Kwong2014} and \cite{jeong2010sl
 \section{Corresponding Temporal Profile for The Maximum Points in The 3-Level EIT Medium's Forward-Scattered Intensity Spectrum}
 In this section, it is dedicated to show the validity of the $I_{s}$ spectrum that were obtained for the 3-level EIT-enabled medium using the code by comparing the peak values in the $I_{s}$ spectrum with the peak value of transmitted intensity (which occurs at the extinction point and are equivalent to $I_{s}$) in their corresponding temporal profile. There will be 3 cases in this section. Each cases are for different values of coupling laser's Rabi frequency $\Omega_{c}$. The first, second and the third case will have incident coupling laser's Rabi frequency $\Omega_{c}$ of $0$, $4.2\gamma_{eg}$ and $8.4\gamma_{eg}$ respectively.
 
-\begin{figure}[h!]
+Firstly, in Figure \ref{fig: corresponding temporal profile 1}, the $I_{s}$ spectrum are for the $\Omega_{c} = 0$ case (which is equivalent to a 2-level medium). All other parameters e.g. OD and medium atomic species are according to \cite{jeong2010slow}. The detuning points that are chosen are the local maxima near resonance ($\Delta = 3.1565\gamma_{eg}$) and the global maxima at the wing of the spectrum ($\Delta = 10.8488\gamma_{eg}$). As can be clearly seen, the value of $I_{s}$ in both temporal profiles agree closely with the value of $I_{s}$ in the spectrum at their respective probe detuning. Therefore, for the 3-level EIT-disabled case here, $I_{s}$ value in the spectrum are able to represent accurately and excellently in the temporal profile at the corresponding detuning.
+
+\begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/spectralTemporal1.png}
     \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-disabled medium ($\Omega_{c} = 0 \frac{rad}{sec}$). b)  Temporal profile at probe detuning $\Delta = 3.1565\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 10.8488\gamma_{eg}$.}
     \label{fig: corresponding temporal profile 1}
 \end{figure}
 
-Firstly, in Figure \ref{fig: corresponding temporal profile 1}, the $I_{s}$ spectrum are for the $\Omega_{c} = 0$ case (which is equivalent to a 2-level medium). All other parameters e.g. OD and medium atomic species are according to \cite{jeong2010slow}. The detuning points that are chosen are the local maxima near resonance ($\Delta = 3.1565\gamma_{eg}$) and the global maxima at the wing of the spectrum ($\Delta = 10.8488\gamma_{eg}$). As can be clearly seen, the value of $I_{s}$ in both temporal profiles agree closely with the value of $I_{s}$ in the spectrum at their respective probe detuning. Therefore, for the 3-level EIT-disabled case here, $I_{s}$ value in the spectrum are able to represent accurately and excellently in the temporal profile at the corresponding detuning.
+Next, in Figure \ref{fig: corresponding temporal profile 2}, the $I_{s}$ spectrum are for the $\Omega_{c} = 4.2\gamma_{eg}$ case. Making it a 3-level EIT medium. All other parameters are still the same as before. The detuning values that are chosen are the maxima point near resonance ($\Delta = 0.3714\gamma_{eg}$. The value are really close to the global maxima's value) and the global maxima point ($\Delta = 11.2467\gamma_{eg}$). As shown in the figure, the value of $I_{s}$ in both temporal profiles also agree closely with the value of $I_{s}$ in the spectrum at their respective probe detuning. At the first point, $I_{s}$ is about $2.7I_{0}$ while at the 2nd chosen point, it's about $3I_{0}$. So, for the case here, the $I_{s}$ value in the $I_{s}$ spectrum are also able to represent the $I_{s}$ value in the temporal profile at the corresponding detuning.
 
-\newpage
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
      \includegraphics[width = 1\textwidth]{Figures/spectralTemporal2.PNG}
     \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 4.2\gamma_{eg}$). b) Temporal profile at probe detuning $\Delta = 0.3714\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 11.2467\gamma_{eg}$.}
     \label{fig: corresponding temporal profile 2}
 \end{figure}
 
-Next, in Figure \ref{fig: corresponding temporal profile 2}, the $I_{s}$ spectrum are for the $\Omega_{c} = 4.2\gamma_{eg}$ case. Making it a 3-level EIT medium. All other parameters are still the same as before. The detuning values that are chosen are the maxima point near resonance ($\Delta = 0.3714\gamma_{eg}$. The value are really close to the global maxima's value) and the global maxima point ($\Delta = 11.2467\gamma_{eg}$). As shown in the figure, the value of $I_{s}$ in both temporal profiles also agree closely with the value of $I_{s}$ in the spectrum at their respective probe detuning. At the first point, $I_{s}$ is about $2.7I_{0}$ while at the 2nd chosen point, it's about $3I_{0}$. So, for the case here, the $I_{s}$ value in the $I_{s}$ spectrum are also able to represent the $I_{s}$ value in the temporal profile at the corresponding detuning.
+Finally, in Figure \ref{fig: corresponding temporal profile 3}, the $I_{s}$ spectrum are for the $\Omega_{c} = 8.4\gamma_{eg}$ case. Making it also a 3-level EIT medium like the 2nd case. All parameters e.g. OD and medium atomic species are unchanged and identical to the previous case. The detuning values are chosen for the maxima point near resonance ($\Delta = 1.2997\gamma_{eg}$. The value are also really close to the global maxima's value) and the global maxima point at the wing of the spectrum ($\Delta = 12.3077\gamma_{eg}$). As expected, the value of $I_{s}$ in both temporal profiles agree with the value of $I_{s}$ in the spectrum at their respective probe detunin  g. At both chosen points, the $I_{s}$ values are about $3I_{0}$. Hence, for the case here, the $I_{s}$ value in the $I_{s}$ spectrum are also able to represent the $I_{s}$ value in the temporal profile at the respective detuning.
 
-\newpage
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width = 1\textwidth]{Figures/spectralTemporal3.png}
+    \includegraphics[width = 0.93\textwidth]{Figures/spectralTemporal3.png}
     \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 8.4\gamma_{eg}$). b) Temporal profile at probe detuning $\Delta = 1.2997\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 12.3077\gamma_{eg}$.}
     \label{fig: corresponding temporal profile 3}
 \end{figure}
-
-Finally, in Figure \ref{fig: corresponding temporal profile 3}, the $I_{s}$ spectrum are for the $\Omega_{c} = 8.4\gamma_{eg}$ case. Making it also a 3-level EIT medium like the 2nd case. All parameters e.g. OD and medium atomic species are unchanged and identical to the previous case. The detuning values are chosen for the maxima point near resonance ($\Delta = 1.2997\gamma_{eg}$. The value are also really close to the global maxima's value) and the global maxima point at the wing of the spectrum ($\Delta = 12.3077\gamma_{eg}$). As expected, the value of $I_{s}$ in both temporal profiles agree with the value of $I_{s}$ in the spectrum at their respective probe detunin  g. At both chosen points, the $I_{s}$ values are about $3I_{0}$. Hence, for the case here, the $I_{s}$ value in the $I_{s}$ spectrum are also able to represent the $I_{s}$ value in the temporal profile at the respective detuning.
-
-\newpage
 
 In summary, for every cases presented here, each of the $I_{s}$ spectrum have the same values with the $I_{s}$ values in the corresponding temporal profiles at the selected detuning points. It can also be noted that for both the near-resonance maxima points and the global maxima points at the wing of the spectrum, as the coupling laser's Rabi frequency $\Omega_{c}$ is increased, their respective detuning value also increase. So, it is hypothesized that this detuning $\Delta$ are directly proportional to the coupling laser's Rabi frequency $\Omega_{c}$. This hypothesis will be discussed in more details in the next section with a proposed relevant equations.
 
@@ -120,9 +114,7 @@ In summary, for every cases presented here, each of the $I_{s}$ spectrum have th
 \section{Relation between The Forward-Scattered Intensity Spectrum with The Coupling Laser's Rabi Frequency}\label{OmegaCDependence}
 As mentioned in the previous section, it is observed that, when the coupling laser's Rabi frequency are switched-on and as its value are increased, aside from the production of a new spectral feature in the $I_{s}$ spectrum near resonance (see Figure \ref{fig: comparing Is spectrum}b), the $I_{s}$ spectrum also becomes "wider". Meaning  that the detuning range between the maximal detunings $\Delta_{max}$ on both sides of the spectrum become larger. Furthermore, this effect also applies on both local maxima points near resonance. This effect of "spectrum broadening" can be seen in Figure \ref{fig: Is compared to transmission & phase shift}. The effect of turning-on the coupling laser by changing its Rabi frequency from $0$ to $4.2\gamma_{eg}$ (Figure \ref{fig: Is compared to transmission & phase shift}a to \ref{fig: Is compared to transmission & phase shift}b respectively) essentially introduces a new spectral feature near the resonance with a peak value that is quite close to the peak value of superflash at the global maxima points (at the wing of the spectrum having maximal detuning $\Delta_{max}$). Visually, we can also see that the spectrum structure in the range of  $\Delta \approx -5\gamma_{eg}$ up to $\Delta \approx 5\gamma_{eg}$ in Figure \ref{fig: Is compared to transmission & phase shift}a seems to be "replicated" into 2 "copies". Each copy on the red-detuned and blue-detuned side of the spectrum as can be seen starting from Figure \ref{fig: Is compared to transmission & phase shift}b.
 
-\newpage
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/compareSpectral2.PNG}
     \caption{4 subfigures each with different coupling laser's Rabi frequency $\Omega_{c}$. For each subfigure, the $I_{s}$ spectrum are plotted separately while the steady-state transmission $I_{ss}$ (solid green line) and the phase shift $\phi$ (solid blue line) are plotted together. a) $\Omega_{c} = 0$. b) $\Omega_{c} = 4.2\gamma_{eg}$. c) $\Omega_{c} = 8.4\gamma_{eg}$. d) $\Omega_{c} = 16.8\gamma_{eg}$. Note that $\gamma_{eg} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$.}
@@ -141,15 +133,13 @@ Finally, for the widening of the $I_{s}$ spectrum. From Figure \ref{fig: Is comp
 
 From now on, we will discuss the values on the positive side of the detuning spectrum for simplicity and clarity (The general behaviour is the same even on the negative side of the spectrum). Referring to figure \ref{fig: omegaPhase}a when the EIT effect is turned off ($\Omega_{c} = 0$), at the maximal detuning ($\Delta_{max} = 10.8488\gamma_{eg}$), we have the phase shift $\Delta\phi = -0.9020\pi$. Next, for the case where EIT effect is turned on in Figure \ref{fig: omegaPhase}b, \ref{fig: omegaPhase}c and \ref{fig: omegaPhase}d with coupling laser's Rabi frequency $\Omega_{c} = 4.2\gamma_{eg}$, $\Omega_{c} = 8.4\gamma_{eg}$ and $\Omega_{c} = 16.8\gamma_{eg}$ respectively. For each cases, We will have two values of phase shifts $\Delta\phi$. Each of the phase shift values are for the maxima point in the $I_{s}$ spectrum that is near resonance (with $\Delta_{nmax}$) and at the wing of the spectrum (with $\Delta_{max}$). For $\Omega_{c} = 4.2\gamma_{eg}$ case, we have $\Delta\phi = 0.8492\pi$ and $\Delta\phi = -0.9015\pi$.  
 
-Next,  for $\Omega_{c} = 8.4\gamma_{eg}$ case, we have $\Delta\phi = 0.7982\pi$ and $\Delta\phi = -0.8999\pi$. For the last case where $\Omega_{c} = 16.8\gamma_{eg}$, we have $\Delta\phi = 0.8694\pi$ and $\Delta\phi = -0.9089\pi$. As we can clearly observe, all of the phase shift values have an absolute value that is really close $\pi$. The largest percentage error is about $20.18\%$ for the $\Omega_{c} = 8.4\gamma_{eg}$ case at the detuning $\Delta_{nmax} = 1.2977\gamma_{eg}$ while the smallest percentage error is $9.11\%$ for the $\Omega_{c} = 16.8\gamma_{eg}$ case at the detuning $\Delta_{max} = 15.3581\gamma_{eg}$.
-
-\newpage
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/omegePhase.PNG}
     \caption{Plot of $I_{s}$ spectrum compared to their corresponding phase shift spectrum for a) $\Omega_{c} = 0$, b) $\Omega_{c} = 4.2\gamma_{eg}$, c) $\Omega_{c} = 8.4\gamma_{eg}$ and d) $\Omega_{c} = 16.8\gamma_{eg}$. The circle signifies the point where the detuning $\Delta$ is equal to the maximal $\Delta_{max}$ and near-resonance maximal $\Delta_{nmax}$ detuning.}
     \label{fig: omegaPhase}
 \end{figure}
+
+Next,  for $\Omega_{c} = 8.4\gamma_{eg}$ case, we have $\Delta\phi = 0.7982\pi$ and $\Delta\phi = -0.8999\pi$. For the last case where $\Omega_{c} = 16.8\gamma_{eg}$, we have $\Delta\phi = 0.8694\pi$ and $\Delta\phi = -0.9089\pi$. As we can clearly observe, all of the phase shift values have an absolute value that is really close $\pi$. The largest percentage error is about $20.18\%$ for the $\Omega_{c} = 8.4\gamma_{eg}$ case at the detuning $\Delta_{nmax} = 1.2977\gamma_{eg}$ while the smallest percentage error is $9.11\%$ for the $\Omega_{c} = 16.8\gamma_{eg}$ case at the detuning $\Delta_{max} = 15.3581\gamma_{eg}$.
 
 Therefore, it can be concluded that the maxima point in the $I_{s}$ spectrum occurs at their respective detuning such that the absolute value of the phase shift of the field have an absolute value $\approx \pi$. Furthermore, because the maximal and the near-resonance maximal detuning is directly proportional to the coupling laser's Rabi frequency $\Omega_{c}$, it can act as a "selector" or "controller" to select the desired detuning that outputs a maximum $I_{s}$ values. So now, instead of a fixed detuning, we will have a convenient option to shift around the detuning only by manipulating the strength of the coupling laser's electric field (related to its Rabi frequency $\Omega_{c}$).
