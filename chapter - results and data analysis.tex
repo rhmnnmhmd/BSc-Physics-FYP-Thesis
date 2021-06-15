@@ -12,7 +12,7 @@ From Figure \ref{fig: comparing temporal profile 1}, we can see that the Python 
 \begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/default2.png}
-    \caption{Comparison of the transmitted intensity temporal profile for square light pulse incident on 3-level EIT-enabled medium. a) Plot of the temporal profile using hybrid analysis of \protect\cite{jeong2010slow} (solid blue curve) and using FFT (black dashed curve). Figure courtesy of \protect\cite{jeong2010slow}. b) Temporal profile for the same parameters generated from Python code developed in this project.}
+    \caption[Comparison of Transmitted Intensity Temporal Profile From \protect\cite{jeong2010slow} and This Project's Simulation]{Comparison of the transmitted intensity temporal profile for square light pulse incident on 3-level EIT-enabled medium. a) Plot of the temporal profile using hybrid analysis of \protect\cite{jeong2010slow} (solid blue curve) and using FFT (black dashed curve). Figure courtesy of \protect\cite{jeong2010slow}. b) Temporal profile for the same parameters generated from Python code developed in this project.}
     \label{fig: comparing temporal profile 1}
 \end{figure}
 
@@ -29,7 +29,7 @@ To demonstrate the dependence of the forward-scattered intensity $I_{s}$ to the 
 \begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/compareTemporal3.png}
-    \caption{Transmission intensity temporal profile of an incident square pulse (pulse duration of $2\cdot10^{-6}$ sec) on cold, dilute atomic gas of Rb-85 with optical depth (OD) of 62 and coupling laser's Rabi frequency of $4.2\gamma_{eg}$ where $\gamma_{eg}$ is half of the natural linewidth $\gamma_{eg} = \frac{\Gamma_{e}}{2} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$. Each only have different probe detuning $\Delta$. a) $\Delta = 5.6764\gamma_{eg}$. b) $\Delta = 0.3714\gamma_{eg}$. c) $\Delta = 11.2467\gamma_{eg}$.}
+    \caption[Plots of Transmitted Intensity Temporal Profile for Different Detunings]{Transmission intensity temporal profile of an incident square pulse (pulse duration of $2\cdot10^{-6}$ sec) on cold, dilute atomic gas of Rb-85 with optical depth (OD) of 62 and coupling laser's Rabi frequency of $4.2\gamma_{eg}$ where $\gamma_{eg}$ is half of the natural linewidth $\gamma_{eg} = \frac{\Gamma_{e}}{2} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$. Each only have different probe detuning $\Delta$. a) $\Delta = 5.6764\gamma_{eg}$. b) $\Delta = 0.3714\gamma_{eg}$. c) $\Delta = 11.2467\gamma_{eg}$.}
     \label{fig: comparing temporal profile 2}
 \end{figure}
 
@@ -62,14 +62,14 @@ In Figure \ref{fig: comparing Is spectrum}. The $I_{s}$ spectrum for a 3-level m
 \begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/compareSpectral.png}
-    \caption{The forward-scattered intensity detuning spectrum ($I_{s}$ spectrum from now on) for the same initial parameters but a) Without EIT (Coupling laser's Rabi frequency $\Omega_{c} = 0$) while b) With EIT (Coupling laser's Rabi frequency $\Omega_{c} = 4.2\gamma_{eg}$ where $\gamma_{eg} = 1.885 \cdot 10^{7} \frac{rad}{sec}$).}
+    \caption[Plot of $I_{s}$ Spectrum For 3-Level EIT-Disabled and EIT-Enabled Medium]{The forward-scattered intensity detuning spectrum ($I_{s}$ spectrum from now on) for the same initial parameters but a) Without EIT (Coupling laser's Rabi frequency $\Omega_{c} = 0$) while b) With EIT (Coupling laser's Rabi frequency $\Omega_{c} = 4.2\gamma_{eg}$ where $\gamma_{eg} = 1.885 \cdot 10^{7} \frac{rad}{sec}$).}
     \label{fig: comparing Is spectrum}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width = 0.5\textwidth]{Figures/3LevelAtom.png}
-    \caption{Note that the different notation used here for the energy levels. $\ket{1}$ is equivalent to $\ket{g}$. $\ket{2}$ is equivalent to $\ket{c}$. $\ket{3}$ is equivalent to $\ket{e}$. Figure courtesy of \protect\cite{Jeong2009}.}
+    \caption[Schematic of The Energy Levels Involved in A 3-Level EIT Medium]{Note that the different notation used here for the energy levels. $\ket{1}$ is equivalent to $\ket{g}$. $\ket{2}$ is equivalent to $\ket{c}$. $\ket{3}$ is equivalent to $\ket{e}$. Figure courtesy of \protect\cite{Jeong2009}.}
     \label{fig: 3LevelAtom}
 \end{figure}
 
@@ -86,7 +86,7 @@ Firstly, in Figure \ref{fig: corresponding temporal profile 1}, the $I_{s}$ spec
 \begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/spectralTemporal1.png}
-    \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-disabled medium ($\Omega_{c} = 0 \frac{rad}{sec}$). b)  Temporal profile at probe detuning $\Delta = 3.1565\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 10.8488\gamma_{eg}$.}
+    \caption[Plots of Transmitted Intensity Temporal Profile At Their Corresponding Detuning in The $I_{s}$ Spectrum For $\Omega_{c} = 0$]{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-disabled medium ($\Omega_{c} = 0 \frac{rad}{sec}$). b)  Temporal profile at probe detuning $\Delta = 3.1565\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 10.8488\gamma_{eg}$.}
     \label{fig: corresponding temporal profile 1}
 \end{figure}
 
@@ -95,7 +95,7 @@ Next, in Figure \ref{fig: corresponding temporal profile 2}, the $I_{s}$ spectru
 \begin{figure}
     \centering
      \includegraphics[width = 1\textwidth]{Figures/spectralTemporal2.PNG}
-    \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 4.2\gamma_{eg}$). b) Temporal profile at probe detuning $\Delta = 0.3714\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 11.2467\gamma_{eg}$.}
+    \caption[Plots of Transmitted Intensity Temporal Profile At Their Corresponding Detuning in The $I_{s}$ Spectrum For $\Omega_{c} = 4.2\gamma_{eg}$]{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 4.2\gamma_{eg}$). b) Temporal profile at probe detuning $\Delta = 0.3714\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 11.2467\gamma_{eg}$.}
     \label{fig: corresponding temporal profile 2}
 \end{figure}
 
@@ -104,7 +104,7 @@ Finally, in Figure \ref{fig: corresponding temporal profile 3}, the $I_{s}$ spec
 \begin{figure}
     \centering
     \includegraphics[width = 0.93\textwidth]{Figures/spectralTemporal3.png}
-    \caption{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 8.4\gamma_{eg}$). b) Temporal profile at probe detuning $\Delta = 1.2997\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 12.3077\gamma_{eg}$.}
+    \caption[Plots of Transmitted Intensity Temporal Profile At Their Corresponding Detuning in The $I_{s}$ Spectrum For $\Omega_{c} = 8.4\gamma_{eg}$]{The corresponding temporal profiles at local maxima point in the $I_{s}$ spectrum b) near resonance and c) off-resonance. a) $I_{s}$ spectrum for 3-level EIT-enabled medium ($\Omega_{c} = 8.4\gamma_{eg}$). b) Temporal profile at probe detuning $\Delta = 1.2997\gamma_{eg}$. c) Temporal profile at probe detuning $\Delta = 12.3077\gamma_{eg}$.}
     \label{fig: corresponding temporal profile 3}
 \end{figure}
 
@@ -117,7 +117,7 @@ As mentioned in the previous section, it is observed that, when the coupling las
 \begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/compareSpectral2.PNG}
-    \caption{4 subfigures each with different coupling laser's Rabi frequency $\Omega_{c}$. For each subfigure, the $I_{s}$ spectrum are plotted separately while the steady-state transmission $I_{ss}$ (solid green line) and the phase shift $\phi$ (solid blue line) are plotted together. a) $\Omega_{c} = 0$. b) $\Omega_{c} = 4.2\gamma_{eg}$. c) $\Omega_{c} = 8.4\gamma_{eg}$. d) $\Omega_{c} = 16.8\gamma_{eg}$. Note that $\gamma_{eg} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$.}
+    \caption[Plot of $I_{s}$ Spectrum, Steady-State Transmission Intensity and The Phase Shift]{4 subfigures each with different coupling laser's Rabi frequency $\Omega_{c}$. For each subfigure, the $I_{s}$ spectrum are plotted separately while the steady-state transmission $I_{ss}$ (solid green line) and the phase shift $\phi$ (solid blue line) are plotted together. a) $\Omega_{c} = 0$. b) $\Omega_{c} = 4.2\gamma_{eg}$. c) $\Omega_{c} = 8.4\gamma_{eg}$. d) $\Omega_{c} = 16.8\gamma_{eg}$. Note that $\gamma_{eg} = 1.8850 \cdot 10^{7} \frac{rad}{sec}$.}
     \label{fig: Is compared to transmission & phase shift}
 \end{figure}
 
@@ -136,7 +136,7 @@ From now on, we will discuss the values on the positive side of the detuning spe
 \begin{figure}
     \centering
     \includegraphics[width = 1\textwidth]{Figures/omegePhase.PNG}
-    \caption{Plot of $I_{s}$ spectrum compared to their corresponding phase shift spectrum for a) $\Omega_{c} = 0$, b) $\Omega_{c} = 4.2\gamma_{eg}$, c) $\Omega_{c} = 8.4\gamma_{eg}$ and d) $\Omega_{c} = 16.8\gamma_{eg}$. The circle signifies the point where the detuning $\Delta$ is equal to the maximal $\Delta_{max}$ and near-resonance maximal $\Delta_{nmax}$ detuning.}
+    \caption[Plot of $I_{s}$ Spectrum Compared With The Phase Shift]{Plot of $I_{s}$ spectrum compared to their corresponding phase shift spectrum for a) $\Omega_{c} = 0$, b) $\Omega_{c} = 4.2\gamma_{eg}$, c) $\Omega_{c} = 8.4\gamma_{eg}$ and d) $\Omega_{c} = 16.8\gamma_{eg}$. The circle signifies the point where the detuning $\Delta$ is equal to the maximal $\Delta_{max}$ and near-resonance maximal $\Delta_{nmax}$ detuning.}
     \label{fig: omegaPhase}
 \end{figure}
 
