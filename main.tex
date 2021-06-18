@@ -1,54 +1,17 @@
-%% thesis.tex
-%% Distributed with umalayathesis v1.5 (28 October 2018)
-\documentclass[english, singlespacedlisttitles, apacite, custombib]{umalayathesis}
-%\documentclass{umalayathesis}
-%% Document class options
-%% -----------------------
-%% english (default): English thesis
-%%
-%% bahasam : Malay thesis
-%%
-%% apacite (default): Loads the apacite package, which implements the APA
-%%    citation and referencing styles strictly, including expansion of
-%%    of 3–5 authors on first citation.
-%%
-%% newapa: Loads the natbib and apalike package for a APA-like reference list
-%%    but *does not fully implement* all APA citation styles. In particular,
-%%    this option will not expand references with 3–5 authors on first citation.
-%%    NOT RECOMMENDED UNLESS EXPLICITLY REQUESTED BY EXAMINER.
-%%
-%% custombib: Does not pre-load any bibliography style; you will need to
-%%    specify \bibliographystyle, \bibliographystyleown etc yourself.
-%%
-%% appendixhead: Add "APPENDICES" before the Appendix A title
-%%
-%% altcaption: Caption in smaller fonts; only Figure X, Table Y bold.
-%%
-%% singlespacedlisttitles: Long titles in the ToC, LoT, LoF, LoA are single-spaced.
-%%
-%% listpageheader: If your faculty requires a "header row" at the top of
-%%    the List of Figures/Tables. You can re-define \lofpageheader and
-%%    \lotpageheader if necessary, e.g.
-%%           \renewcommand{\lofpageheader}{\hfill Page}
-%%
-%% boldfrontmattertoc: If your faculty wants front matter "chapters" to be
-%%    bold in the ToC
-%%
-%% boldbackmattertoc: If the backmatter "chapters" are to be bolded as well
-%%
-%% uppercasetoc: If all "chapter" level headings must be upper-cased in the ToC
-
-\usepackage{lipsum}
+\documentclass{umalayathesis}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{microtype}
+
+\author{Abdul Rahman bin Mohd @ Mohamed}
+\title{Controllable Superflash in Electromagnetically Induced Transparency (EIT) Medium}
+\faculty{Department of Physics\\Faculty of Science}
+\submissionyear{2021}
+\degree{Bachelor of Science in Physics}
+
 \usepackage{graphicx}
-\graphicspath{ {./Figures/} }
-\usepackage[dvipsnames,x11names]{xcolor}
+\usepackage{appendix}
 
 %my own loaded packages
 \usepackage{amsmath, amsfonts, amssymb, amsthm}  
-%\numberwithin{equation}{subsection}
 \usepackage{enumerate}
 \usepackage{verbatim}
 \usepackage{physics}
@@ -56,67 +19,27 @@
 \usepackage{subcaption}
 \usepackage{bbold}
 \usepackage{braket}
-%\usepackage{cite}
 \usepackage{listings}
-
-% Useful for including code listings
-\usepackage{listings}
-\lstset{language=[LaTeX]TeX,columns=fullflexible,
-        basicstyle=\ttfamily\SingleSpacing,
-        texcsstyle=*\bfseries\color{NavyBlue},
-        commentstyle=\itshape\color{PaleVioletRed4},
-        frame=single,framesep=6pt,
-        framexleftmargin=6pt,framexrightmargin=6pt,
-        xleftmargin=12pt,xrightmargin=12pt,
-        breaklines=true,breakatwhitespace=true}
-
-% Useful for multi-page pages. Either longtable or supertabular is fine; choose any one that you're comfortable with
-\usepackage{longtable}
-% \usepackage{supertabular}
-
-
-\author{Abdul Rahman bin Mohd @ Mohamed\\
-Supervisor: Associate Professor Doctor Jeong Hee Jeong
-}
-\title{Controllable Superflash in Electromagnetically Induced Transparency (EIT) Medium}
-
-%% If \othertitle is given, then the second abstract will display it
-%% (i.e. if your thesis is "english" then this is printed on top of the Malay abstract
-%% and if your thesis is "bahasam" then this is printed on top of the English abstract)
-%% If no \othertitle is given then the second abstract will not have any translated thesis title
-\othertitle{Superflash Terkawal dalam Medium dengan Kelutsinaran Terinduksi Menerusi Keelektromagnetan}
-
-\faculty{Department of Physics\\Faculty of Science}
-\submissionyear{2020/2021}
-\degree{Bachelor of Science in Physics}
 
 
 \begin{document}
+
 \frontmatter
 
-%% Choose only ONE from the following to get the
-%% correct statement on the title page
-% \makecoverandtitlepage{\mastercoursework}
-% \makecoverandtitlepage{\mastermixedmode}
-% \makecoverandtitlepage{\masterresearch}
-% \makecoverandtitlepage{\doctoralcoursework}
 \makecoverandtitlepage{\doctoralresearch}
-% \makecoverandtitlepage{\doctoralmixedmode}
-
 \declarationpage
 \abstractfromfile{abstract}
 \msabstractfromfile{malayabstract}
-\acknowledgements{First and foremost, I would like to thank my project supervisor, Associate Professor Doctor Jeong Heejeong for her commitment and patience in guiding me throughout this project.\\
 
-I also would like to thank my parents for being an understanding and supportive figure for me in the current tough times with the full-online and at-home study session that have been going for 3 semesters.\\
+\acknowledgements{First and foremost, I would like to thank my project supervisor, Associate Professor Doctor Jeong Heejeong for her commitment and patience in guiding me throughout this project.
+
+I also would like to thank my parents for being an understanding and supportive figure for me in the current tough times with the full-online and at-home study session that have been going for 3 semesters.
 
 Finally, not to forget, I also want to send my love and appreciation for my friends and colleagues that have been always keeping in touch with me even with the difficulty of online class etc.}
 
 {\clearpage
 \tableofcontents\clearpage
-\listoffigures\clearpage
-\listoftables\clearpage
-\listofappendices\clearpage}
+\listoffigures\clearpage}
 
 \mainmatter
 
@@ -128,11 +51,6 @@ Finally, not to forget, I also want to send my love and appreciation for my frie
 
 \backmatter
 
-\bibliographystyle{apalike}
 \bibliography{references}
-
-%\begin{appendices}
-%\input{appendices}
-%\end{appendices}
 
 \end{document}
