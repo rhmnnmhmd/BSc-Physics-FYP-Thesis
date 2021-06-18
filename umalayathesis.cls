@@ -333,11 +333,11 @@
   \chapter*{Universiti Malaya\vskip1em Original Literary Work Declaration}
   %\chapter[Original Literary Work Declaration]{{\large Universiti Malaya}\vskip1em Original Literary Work Declaration}
   {%\large%
-    \noindent Name of Candidate: \hfill (I.C./Passport No.:\hspace{10em})\par
-    \noindent Registration/Matric No.:\par
-    \noindent Name of Degree:\par
-    \noindent Title of Project Paper/Research Report/Dissertation/Thesis (``this Work''):\vskip 3em\par
-    \noindent Field of Study:\par
+    \noindent Name of Candidate: Abdul Rahman bin Mohd @ Mohamed \vspace{0.2cm} (I.C./Passport No.: 990707035027)\par
+    \noindent Registration/Matric No.: SIF180002 | 17177739\par
+    \noindent Name of Degree: Bachelor of Science in Physics\par
+    \noindent Title of Project Paper/Research Report/Dissertation/Thesis (``this Work''): Controllable Superflash in Electromagnetically Induced Transparency (EIT) Medium \par
+    \noindent Field of Study: Physics\par
 
     {\SingleSpacing\setSingleSpace{1.15}
     I do solemnly and sincerely declare that:
